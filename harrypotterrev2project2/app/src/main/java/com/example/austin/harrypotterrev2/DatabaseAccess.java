@@ -66,6 +66,7 @@ public class DatabaseAccess {
         while (!cursor.isAfterLast()) {
             list.add(cursor.getString(0));
             cursor.moveToNext();
+
         }
         cursor.close();
         return list;
