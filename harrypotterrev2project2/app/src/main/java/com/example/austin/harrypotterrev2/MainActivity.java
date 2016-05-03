@@ -1,7 +1,9 @@
 package com.example.austin.harrypotterrev2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -23,9 +25,5 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, movies);
         listView.setAdapter(adapter);
     }
-
-
-
-
-    }
+}
 
