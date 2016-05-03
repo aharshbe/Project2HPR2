@@ -71,4 +71,17 @@ public class DatabaseAccess {
         cursor.close();
         return list;
     }
+
+    public List<String> getPlot() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT plot from moviesDescription", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+
+        }
+        cursor.close();
+        return list;
+    }
 }
