@@ -17,7 +17,7 @@ public class Main2Activity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listView2);
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
-        List<String> movies = databaseAccess.getPlot();
+        List<String> movies = databaseAccess.getTopQuote();
         databaseAccess.close();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, movies);

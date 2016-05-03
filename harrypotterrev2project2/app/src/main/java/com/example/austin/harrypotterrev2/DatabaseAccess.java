@@ -59,7 +59,7 @@ public class DatabaseAccess {
      *
      * @return a List of quotes
      */
-    public List<String> getMovies() {
+    public List<String> getGross() {
         List<String> list = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT gross from moviesDescription", null);
         cursor.moveToFirst();
@@ -75,6 +75,45 @@ public class DatabaseAccess {
     public List<String> getPlot() {
         List<String> list = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT plot from moviesDescription", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<String> getRuntime() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT runtime from moviesDescription", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<String> getTopQuote() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT topquote from moviesDescription", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<String> getDate() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT date from moviesDescription", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             list.add(cursor.getString(0));
