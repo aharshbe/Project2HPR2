@@ -1,0 +1,115 @@
+CREATE TABLE "AppMainDB" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+CREATE TABLE "HPTopics" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "app_main_d_b" INTEGER NOT NULL REFERENCES "AppMainDB" ("id")
+);
+
+CREATE INDEX "idx_hptopics__app_main_d_b" ON "HPTopics" ("app_main_d_b");
+
+CREATE TABLE "Books" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "HP1" TEXT NOT NULL,
+  "HP2" TEXT NOT NULL,
+  "HP3" TEXT NOT NULL,
+  "HP4" TEXT NOT NULL,
+  "HP5" TEXT NOT NULL,
+  "HP6" TEXT NOT NULL,
+  "HP7" TEXT NOT NULL,
+  "h_p_topics" INTEGER NOT NULL REFERENCES "HPTopics" ("id")
+);
+
+CREATE INDEX "idx_books__h_p_topics" ON "Books" ("h_p_topics");
+
+CREATE TABLE "Characters" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "CH1" TEXT NOT NULL,
+  "CH2" TEXT NOT NULL,
+  "CH3" TEXT NOT NULL,
+  "CH4" TEXT NOT NULL,
+  "CH5" TEXT NOT NULL,
+  "CH6" TEXT NOT NULL,
+  "CH7" TEXT NOT NULL,
+  "h_p_topics" INTEGER NOT NULL REFERENCES "HPTopics" ("id")
+);
+
+CREATE INDEX "idx_characters__h_p_topics" ON "Characters" ("h_p_topics");
+
+CREATE TABLE "Movies" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "HPMV1" TEXT NOT NULL,
+  "HPMV2" TEXT NOT NULL,
+  "HPMV3" TEXT NOT NULL,
+  "HPMV4" TEXT NOT NULL,
+  "HPMV5" TEXT NOT NULL,
+  "HPMV6" TEXT NOT NULL,
+  "HPMV7P1" TEXT NOT NULL,
+  "HPMV7P2" TEXT NOT NULL,
+  "h_p_topics" INTEGER NOT NULL REFERENCES "HPTopics" ("id")
+);
+
+CREATE INDEX "idx_movies__h_p_topics" ON "Movies" ("h_p_topics");
+
+CREATE TABLE "Quotes" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "Q1" TEXT NOT NULL,
+  "Q2" TEXT NOT NULL,
+  "Q3" TEXT NOT NULL,
+  "Q4" TEXT NOT NULL,
+  "Q5" TEXT NOT NULL,
+  "Q6" TEXT NOT NULL,
+  "Q7" TEXT NOT NULL,
+  "h_p_topics" INTEGER NOT NULL REFERENCES "HPTopics" ("id")
+);
+
+CREATE INDEX "idx_quotes__h_p_topics" ON "Quotes" ("h_p_topics");
+
+CREATE TABLE "Trivia" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "InfoQ1" TEXT NOT NULL,
+  "InfoQ2" TEXT NOT NULL,
+  "InfoQ3" TEXT NOT NULL,
+  "InfoQ4" TEXT NOT NULL,
+  "InfoQ5" TEXT NOT NULL,
+  "InfoQ6" TEXT NOT NULL,
+  "InfoQ7" TEXT NOT NULL,
+  "InfoCH1" TEXT NOT NULL,
+  "InfoCH2" TEXT NOT NULL,
+  "InfoCH3" TEXT NOT NULL,
+  "InfoCH4" TEXT NOT NULL,
+  "InfoCH5" TEXT NOT NULL,
+  "InfoCH6" TEXT NOT NULL,
+  "InfoCH7" TEXT NOT NULL,
+  "InfoHP1" TEXT NOT NULL,
+  "InfoHP2" TEXT NOT NULL,
+  "InfoHP3" TEXT NOT NULL,
+  "InfoHP4" TEXT NOT NULL,
+  "InfoHP5" TEXT NOT NULL,
+  "InfoHP6" TEXT NOT NULL,
+  "InfoHP7" TEXT NOT NULL,
+  "InfoHPMV1" TEXT NOT NULL,
+  "InfoHPMV2" TEXT NOT NULL,
+  "InfoHPMV3" TEXT NOT NULL,
+  "InfoHPMV4" TEXT NOT NULL,
+  "InfoHPMV5" TEXT NOT NULL,
+  "InfoHPMV6" TEXT NOT NULL,
+  "InfoHPMV7P1" TEXT NOT NULL,
+  "InfoHPMV7P2" TEXT NOT NULL,
+  "books" INTEGER NOT NULL REFERENCES "Books" ("id"),
+  "movies" INTEGER NOT NULL REFERENCES "Movies" ("id"),
+  "quotes" INTEGER NOT NULL REFERENCES "Quotes" ("id"),
+  "characters" INTEGER NOT NULL REFERENCES "Characters" ("id"),
+  "app_main_d_b" INTEGER NOT NULL REFERENCES "AppMainDB" ("id")
+);
+
+CREATE INDEX "idx_trivia__app_main_d_b" ON "Trivia" ("app_main_d_b");
+
+CREATE INDEX "idx_trivia__books" ON "Trivia" ("books");
+
+CREATE INDEX "idx_trivia__characters" ON "Trivia" ("characters");
+
+CREATE INDEX "idx_trivia__movies" ON "Trivia" ("movies");
+
+CREATE INDEX "idx_trivia__quotes" ON "Trivia" ("quotes")
