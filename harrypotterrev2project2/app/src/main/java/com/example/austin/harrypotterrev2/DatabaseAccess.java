@@ -123,4 +123,17 @@ public class DatabaseAccess {
         cursor.close();
         return list;
     }
+
+    public List<String> getTitle() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("select id from moviesDescription", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+
+        }
+        cursor.close();
+        return list;
+    }
 }
