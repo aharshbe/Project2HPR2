@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main2Activity extends AppCompatActivity {
-    public class myAdapter extends ArrayAdapter<Cursor> {
+    public class myAdapter extends ArrayAdapter<Movie> {
 
-        public myAdapter(Context context, int resource, List<Cursor> cursors) {
+        public myAdapter(Context context, int resource, List<Movie> cursors) {
             super(context, resource, cursors);
         }
 
@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
                 v = vi.inflate(R.layout.description, null);
             }
 
-            Cursor cursor = getItem(position);
+            Movie cursor = getItem(position);
 
 
             if (cursor != null) {
@@ -47,47 +47,39 @@ public class Main2Activity extends AppCompatActivity {
 
 
                 if (title != null) {
-                    title.setText(cursor.getString(cursor.getColumnIndex("title")));
+                    title.setText(cursor.getmTitle());
                 }
                 if (plot != null) {
-                    plot.setText(cursor.getString(cursor.getColumnIndex("plot")));
+                    plot.setText(cursor.getmPlot());
                 }
                 if (date != null) {
-                    date.setText(cursor.getString(cursor.getColumnIndex("date")));
+                    date.setText(cursor.getmDate());
                 }
                 if (runtime != null) {
-                    runtime.setText(cursor.getString(cursor.getColumnIndex("runtime")));
+                    runtime.setText(cursor.getmRuntime());
                 }
                 if (quote != null) {
-                    quote.setText(cursor.getString(cursor.getColumnIndex("quote")));
+                    quote.setText(cursor.getmQuote());
                 }
                 if (gross != null) {
-                    gross.setText(cursor.getString(cursor.getColumnIndex("gross")));
+                    gross.setText(cursor.getmGross());
                 }
 
                 return v;
-
             }
 
-
             return super.getView(position, convertView, parent);
-
-
         }
-
-
         @Override
         public int getCount() {
             return super.getCount();
         }
-
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.description);
+        setContentView(R.layout.activity_main2);
 
 
         Cursor cursor = DatabaseHelper.getInstance(this).listMovies();
@@ -103,11 +95,14 @@ public class Main2Activity extends AppCompatActivity {
             movieToAdd.setmQuote(cursor.getString(cursor.getColumnIndex("quote")));
             movieToAdd.setmGross(cursor.getString(cursor.getColumnIndex("gross")));
 
+            movieDescirption.add(movieToAdd);
+
         }
 
+        myAdapter inflatingAdapter = new myAdapter(this, R.layout.description, movieDescirption);
 
-
-       // listView2.setAdapter(adapter);
+       ListView inflatingListView = (ListView) findViewById(R.id.listView2);
+        inflatingListView.setAdapter(inflatingAdapter);
 
     }
 }
