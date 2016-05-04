@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 18;
+    public static final int DATABASE_VERSION = 19;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -128,12 +128,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 6
         values = new ContentValues();
-        values.put(COL_PLOT, "this is the plot2");
-        values.put(COL_TITLE, "some title2");
-        values.put(COL_DATE, "some date");
-        values.put(COL_RUNTIME, "some runtime");
-        values.put(COL_TOPQUOTE, "some quote");
-        values.put(COL_GROSS, "some gross");
+        values.put(COL_PLOT, "In the sixth year at Hogwarts School of Witchcraft, and in both wizard and muggle worlds Lord Voldemort and his henchmen are increasingly active. With vacancies to fill at Hogwarts, Professor Dumbledore persuades Horace Slughorn, back from retirement to become the potions teacher, while Professor Snape receives long awaited news. Harry Potter, together with Dumbledore, must face treacherous tasks to defeat his evil nemesis. Written by IMDb Editors");
+        values.put(COL_TITLE, "Harry Potter and the Half Blood Prince");
+        values.put(COL_DATE, "15 July 2009 (USA)");
+        values.put(COL_RUNTIME, "153 min");
+        values.put(COL_TOPQUOTE, "'Harry was left to ponder in silence the depths to which girls would sink to get revenge.' \n" +
+                "― J.K. Rowling, Harry Potter and the Half-Blood Prince\n");
+        values.put(COL_GROSS, "$301,956,980 (USA) (11 December 2009)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 7
         values = new ContentValues();
