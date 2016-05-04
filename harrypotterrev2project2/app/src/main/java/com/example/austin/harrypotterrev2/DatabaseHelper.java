@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 16;
+    public static final int DATABASE_VERSION = 17;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -108,12 +108,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 4
         values = new ContentValues();
-        values.put(COL_PLOT, "this is the plot2");
-        values.put(COL_TITLE, "some title2");
-        values.put(COL_DATE, "some date");
-        values.put(COL_RUNTIME, "some runtime");
-        values.put(COL_TOPQUOTE, "some quote");
-        values.put(COL_GROSS, "some gross");
+        values.put(COL_PLOT, "Harry's fourth year at Hogwarts is about to start and he is enjoying the summer vacation with his friends. They get the tickets to The Quidditch World Cup Final but after the match is over, people dressed like Lord Voldemort's 'Death Eaters' set a fire to all the visitors' tents, coupled with the appearance of Voldemort's symbol, the 'Dark Mark' in the sky, which causes a frenzy across the magical community. That same year, Hogwarts is hosting 'The Triwizard Tournament', a magical tournament between three well-known schools of magic : Hogwarts, Beauxbatons and Durmstrang. The contestants have to be above the age of 17, and are chosen by a magical object called Goblet of Fire. On the night of selection, however, the Goblet spews out four names instead of the usual three, with Harry unwittingly being selected as the Fourth Champion. Since the magic cannot be reversed, Harry is forced to go with it and brave three exceedingly difficult tasks. Written by Soumitra");
+        values.put(COL_TITLE, "Harry Potter and the Goblet of Fire");
+        values.put(COL_DATE, "18 November 2005 (USA)");
+        values.put(COL_RUNTIME, "157 min");
+        values.put(COL_TOPQUOTE, "'Just then Neville caused a slight diversion by turning into a large canary.'\n" +
+                "― J.K. Rowling, Harry Potter and the Goblet of Fire");
+        values.put(COL_GROSS, " $289,994,397 (USA) (31 March 2006)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 5
         values = new ContentValues();
