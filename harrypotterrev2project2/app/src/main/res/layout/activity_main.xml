@@ -11,7 +11,32 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_gravity="center" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:id="@+id/movie1"
+        android:background="@drawable/hpv1sor"
+        android:layout_alignTop="@+id/listView"
+        android:layout_toRightOf="@+id/listView"
+        android:layout_toEndOf="@+id/listView" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:id="@+id/movie2"
+        android:background="@drawable/hpv22"
+        android:layout_below="@+id/movie1"
+        android:layout_alignLeft="@+id/movie1"
+        android:layout_alignStart="@+id/movie1" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:id="@+id/movie3"
+        android:background="@drawable/hpmv3movie"
+        android:layout_below="@+id/movie2"
+        android:layout_alignLeft="@+id/movie2"
+        android:layout_alignStart="@+id/movie2" />
 </RelativeLayout>
