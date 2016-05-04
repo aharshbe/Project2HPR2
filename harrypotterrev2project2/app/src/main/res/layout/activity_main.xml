@@ -71,4 +71,12 @@
         android:layout_below="@+id/movie6"
         android:layout_toRightOf="@+id/listView"
         android:layout_toEndOf="@+id/listView" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:id="@+id/movie8"
+        android:background="@drawable/hpmv8"
+        android:layout_below="@+id/movie7"
+        android:layout_toRightOf="@+id/listView"
+        android:layout_toEndOf="@+id/listView" />
 </RelativeLayout>
