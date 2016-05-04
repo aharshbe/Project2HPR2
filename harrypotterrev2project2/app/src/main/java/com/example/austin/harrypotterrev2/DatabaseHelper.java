@@ -165,7 +165,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Cursor cursor = db.query(
                 MOVIES_TABLE_NAME, // a. table
-                new String[]{COL_ID, COL_TITLE}, // b. column names
+                new String[]{COL_ID, COL_TITLE, COL_PLOT, COL_DATE, COL_RUNTIME, COL_TOPQUOTE, COL_GROSS}, // b. column names
                 null, // c. selections //or // or
                 null, // d. selections args
                 null, // e. group by
@@ -185,8 +185,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(
                 MOVIES_TABLE_NAME, // a. table
                 MOVIES_COLUMNS, // b. column names
-                COL_PLOT + " LIKE ? or " + COL_TITLE + " LIKE ? ", // c. selections //or // or
-                new String[]{query + "%", query + "%"}, // d. selections args
+                COL_PLOT + " LIKE ? or " + COL_TITLE + " LIKE ? " + COL_DATE + " LIKE ? " + COL_RUNTIME + " LIKE ? " + COL_TOPQUOTE + " LIKE ? " + COL_GROSS + " LIKE ? " , // c. selections //or // or
+                new String[]{query + "%", query + "%", query + "%", query + "%", query + "%", query + "%"}, // d. selections args
                 null, // e. group by
                 null, // f. having
                 null, // g. order by
