@@ -8,10 +8,14 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.CursorAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -22,7 +26,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<Movie> movieDescirption;
-    SimpleCursorAdapter adapter;
+    CursorAdapter adapter;
 
     //Creates an override method for the search manager that allows the inflation of the information in the searchView to be translated to the searchView and then references it
 
@@ -96,7 +100,26 @@ public class MainActivity extends AppCompatActivity {
 
         //Creates the adapter to utilize the cursor
 
-        adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, cursor, new String[]{OpenHelper.COL_TITLE}, new int[]{android.R.id.text1});
+        adapter = new CursorAdapter(this, cursor, 0) {
+
+
+            @Override
+            public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
+                LayoutInflater layoutInflater = LayoutInflater.from(context);
+                View view = layoutInflater.inflate(R.layout.movies, viewGroup, false);
+                return view;
+            }
+
+            @Override
+            public void bindView(View view, Context context, Cursor cursor) {
+                TextView movieTitle = (TextView) view.findViewById(R.id.MovieName);
+                ImageView movieCursor = (ImageView) view.findViewById(R.id.movieCover);
+                String movie1 = cursor.getString(cursor.getColumnIndex("title"));
+                movieTitle.setText(movie1);
+
+
+            }
+        };
 
         //Sets the adapter to the listView
 
