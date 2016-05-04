@@ -10,6 +10,15 @@ public class Movie {
     private String mRuntime;
     private String mQuote;
     private String mGross;
+    private String mId;
+
+    public String getmId() {
+        return mId;
+    }
+
+    public void setmId(String mId) {
+        this.mId = mId;
+    }
 
     public String getmTitle() {
         return mTitle;
