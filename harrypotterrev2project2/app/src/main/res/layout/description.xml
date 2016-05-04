@@ -18,6 +18,7 @@
         android:text="PLOT"
         android:id="@+id/plot"
         android:textSize="14sp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true" />
 
@@ -27,10 +28,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="DATE"
         android:id="@+id/date"
-        android:layout_marginBottom="126dp"
-        android:layout_above="@+id/gross"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="184dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,10 +39,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="RUNTIME"
         android:id="@+id/runtime"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="30dp"
         android:layout_alignTop="@+id/date"
-        android:layout_alignLeft="@+id/date"
-        android:layout_alignStart="@+id/date" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,10 +50,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="QUOTE"
         android:id="@+id/quote"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/runtime"
-        android:layout_alignLeft="@+id/runtime"
-        android:layout_alignStart="@+id/runtime" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -61,7 +62,7 @@
         android:text="GROSS"
         android:id="@+id/gross"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/quote"
-        android:layout_alignStart="@+id/quote" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
