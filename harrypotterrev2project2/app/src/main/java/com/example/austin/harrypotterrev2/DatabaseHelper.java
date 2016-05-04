@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 19;
+    public static final int DATABASE_VERSION = 20;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -139,7 +139,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //Movie 7
         values = new ContentValues();
         values.put(COL_PLOT, "this is the plot2");
-        values.put(COL_TITLE, "some title2");
+        values.put(COL_TITLE, "Harry Potter and the Deathly Hallows Part 1");
         values.put(COL_DATE, "some date");
         values.put(COL_RUNTIME, "some runtime");
         values.put(COL_TOPQUOTE, "some quote");
@@ -147,12 +147,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 8
         values = new ContentValues();
-        values.put(COL_PLOT, "this is the plot2");
-        values.put(COL_TITLE, "some title2");
-        values.put(COL_DATE, "some date");
-        values.put(COL_RUNTIME, "some runtime");
-        values.put(COL_TOPQUOTE, "some quote");
-        values.put(COL_GROSS, "some gross");
+        values.put(COL_PLOT, "Voldemort's power is growing stronger. He now has control over the Ministry of Magic and Hogwarts. Harry, Ron, and Hermione decide to finish Dumbledore's work and find the rest of the Horcruxes to defeat the Dark Lord. But little hope remains for the Trio, and the rest of the Wizarding World, so everything they do must go as planned. Written by Chris Green");
+        values.put(COL_TITLE, "Harry Potter and the Deathly Hallows part 2");
+        values.put(COL_DATE, "19 November 2010 (USA)");
+        values.put(COL_RUNTIME, " 146 min");
+        values.put(COL_TOPQUOTE, "'Not my daughter, you bitch!'\n" +
+                "― J.K. Rowling, Harry Potter and the Deathly Hallows, Mrs. Weasley");
+        values.put(COL_GROSS, "$294,980,434 (USA) (1 April 2011)");
         db.insert(MOVIES_TABLE_NAME, null, values);
     }
 
