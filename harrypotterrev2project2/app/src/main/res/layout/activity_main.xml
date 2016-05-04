@@ -39,4 +39,12 @@
         android:layout_below="@+id/movie2"
         android:layout_alignLeft="@+id/movie2"
         android:layout_alignStart="@+id/movie2" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:id="@+id/movie4"
+        android:background="@drawable/hpvmv4"
+        android:layout_below="@+id/movie3"
+        android:layout_toRightOf="@+id/listView"
+        android:layout_toEndOf="@+id/listView" />
 </RelativeLayout>
