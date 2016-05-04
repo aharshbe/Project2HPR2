@@ -15,7 +15,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.description);
+        setContentView(R.layout.activity_main2);
 
 
         ListView listView2 = (ListView) findViewById(R.id.listView2);
