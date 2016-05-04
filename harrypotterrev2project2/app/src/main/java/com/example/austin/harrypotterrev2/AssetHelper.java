@@ -4,6 +4,7 @@ package com.example.austin.harrypotterrev2;
  * Created by austin on 5/3/16.
  */
 
+//Creates an asset helper so that the database and version can be referenced properly
 import android.content.Context;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
