@@ -181,7 +181,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(
                 MOVIES_TABLE_NAME, // a. table
                 MOVIES_COLUMNS, // b. column names
-                COL_PLOT + " LIKE ? or " + COL_TITLE + " LIKE ? " + COL_DATE + " LIKE ? " + COL_RUNTIME + " LIKE ? " + COL_TOPQUOTE + " LIKE ? " + COL_GROSS + " LIKE ? ", // c. selections //or // or
+                COL_PLOT + " LIKE ? or " + COL_TITLE + " LIKE ? or " + COL_DATE + " LIKE ? or " + COL_RUNTIME + " LIKE ? or " + COL_TOPQUOTE + " LIKE ? or " + COL_GROSS + " LIKE ? ", // c. selections //or // or
                 new String[]{query + "%", query + "%", query + "%", query + "%", query + "%", query + "%"}, // d. selections args
                 null, // e. group by
                 null, // f. having

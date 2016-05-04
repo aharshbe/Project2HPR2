@@ -18,16 +18,17 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<Movie> movieDescirption;
+    SimpleCursorAdapter adapter;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-//        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-//        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
-//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
+
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
         return true;
 
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             Cursor cursor = OpenHelper.getInstance(MainActivity.this).searchMovies(query);
-
+            adapter.swapCursor(cursor);
 
         }
     }
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        handleIntent(getIntent());
+
 
 
         ListView listView = (ListView) findViewById(R.id.listView);
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
+        adapter = new SimpleCursorAdapter(this,
                 android.R.layout.simple_list_item_1,
                 cursor,
                 new String[] { OpenHelper.COL_TITLE },
@@ -101,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        handleIntent(getIntent());
 
 
     }
