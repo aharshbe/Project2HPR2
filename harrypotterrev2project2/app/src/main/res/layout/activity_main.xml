@@ -56,11 +56,19 @@
         android:layout_toRightOf="@+id/listView"
         android:layout_toEndOf="@+id/listView" />
     <ImageView
+    android:layout_width="60dp"
+    android:layout_height="50dp"
+    android:id="@+id/movie6"
+    android:background="@drawable/hpvmv6"
+    android:layout_below="@+id/movie5"
+    android:layout_toRightOf="@+id/listView"
+    android:layout_toEndOf="@+id/listView" />
+    <ImageView
         android:layout_width="60dp"
         android:layout_height="50dp"
-        android:id="@+id/movie6"
-        android:background="@drawable/hpvmv6"
-        android:layout_below="@+id/movie5"
+        android:id="@+id/movie7"
+        android:background="@drawable/hpmv7"
+        android:layout_below="@+id/movie6"
         android:layout_toRightOf="@+id/listView"
         android:layout_toEndOf="@+id/listView" />
 </RelativeLayout>
