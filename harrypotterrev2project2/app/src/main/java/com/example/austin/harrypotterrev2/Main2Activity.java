@@ -86,7 +86,7 @@ public class Main2Activity extends AppCompatActivity {
         TextView plot = (TextView) findViewById(R.id.plot);
         TextView date = (TextView) findViewById(R.id.date);
         TextView runtime = (TextView) findViewById(R.id.runtime);
-        TextView quote = (TextView) findViewById(R.id.quote);
+        TextView topquote = (TextView) findViewById(R.id.quote);
         TextView gross = (TextView) findViewById(R.id.gross);
 
         Intent intent = getIntent();
@@ -104,7 +104,7 @@ public class Main2Activity extends AppCompatActivity {
         plot.setText(mPlot);
         date.setText(mDate);
         runtime.setText(mRunTime);
-        quote.setText(mTopQuote);
+        topquote.setText(mTopQuote);
         gross.setText(mGross);
 
 

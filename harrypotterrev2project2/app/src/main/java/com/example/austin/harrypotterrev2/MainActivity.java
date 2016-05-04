@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()){
             Movie  movieToAdd = new Movie();
-            movieToAdd.setmId(cursor.getString(cursor.getColumnIndex("id")));
+//            movieToAdd.setmId(cursor.getString(cursor.getColumnIndex("id")));
             movieToAdd.setmTitle(cursor.getString(cursor.getColumnIndex("title")));
             movieToAdd.setmPlot(cursor.getString(cursor.getColumnIndex("plot")));
             movieToAdd.setmDate(cursor.getString(cursor.getColumnIndex("date")));
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Movie movie = movieDescirption.get(position);
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                intent.putExtra("id", movie.getmId());
+           //     intent.putExtra("id", movie.getmId());
                 intent.putExtra("title", movie.getmTitle());
                 intent.putExtra("plot", movie.getmPlot());
                 intent.putExtra("date", movie.getmDate());

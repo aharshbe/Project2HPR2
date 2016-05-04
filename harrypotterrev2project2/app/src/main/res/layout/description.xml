@@ -17,6 +17,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="PLOT"
         android:id="@+id/plot"
+        android:textSize="10sp"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true" />
 
