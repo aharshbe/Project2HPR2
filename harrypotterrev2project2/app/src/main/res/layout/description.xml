@@ -9,6 +9,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="TITLE"
         android:id="@+id/title"
+        android:textColor="#B8860B"
         android:textSize="30sp"/>
 
     <TextView
@@ -26,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
         android:text="DATE"
         android:id="@+id/date"
         android:layout_alignParentBottom="true"
@@ -37,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
         android:text="RUNTIME"
         android:id="@+id/runtime"
         android:layout_marginTop="30dp"
@@ -59,6 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
         android:text="GROSS"
         android:id="@+id/gross"
         android:layout_alignParentBottom="true"
