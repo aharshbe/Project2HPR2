@@ -16,14 +16,20 @@ import android.widget.SimpleCursorAdapter;
 
 import java.util.ArrayList;
 
+//Main class creation
+
 public class MainActivity extends AppCompatActivity {
     ArrayList<Movie> movieDescirption;
     SimpleCursorAdapter adapter;
+
+    //Creates an override method for the search manager that allows the inflation of the information in the searchView to be translated to the searchView and then references it
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
+
+        //ref for the search view and instantiates the search manager
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
@@ -34,10 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Creates override method for when new intent is made
+
     @Override
     protected void onNewIntent(Intent intent) {
         handleIntent(intent);
     }
+
+    //Creates override method for the intent over to the activity that will display/control the query
 
     private void handleIntent(Intent intent) {
 
@@ -49,23 +59,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //On create override method
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //instantiates new listview references
 
 
         ListView listView = (ListView) findViewById(R.id.listView);
 
+        //Creates a new cursor for the listMovies query from the database which grabs the select statement
 
         Cursor cursor = OpenHelper.getInstance(this).listMovies();
 
         movieDescirption = new ArrayList<Movie>();
 
-        for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()){
-            Movie  movieToAdd = new Movie();
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+            Movie movieToAdd = new Movie();
 //            movieToAdd.setmId(cursor.getString(cursor.getColumnIndex("id")));
             movieToAdd.setmTitle(cursor.getString(cursor.getColumnIndex("title")));
             movieToAdd.setmPlot(cursor.getString(cursor.getColumnIndex("plot")));
@@ -74,24 +87,32 @@ public class MainActivity extends AppCompatActivity {
             movieToAdd.setmQuote(cursor.getString(cursor.getColumnIndex("topquote")));
             movieToAdd.setmGross(cursor.getString(cursor.getColumnIndex("gross")));
 
+            //Adds the columns
+
             movieDescirption.add(movieToAdd);
 
         }
 
+        //Creates the adapter to utilize the cursor
+
         adapter = new SimpleCursorAdapter(this,
                 android.R.layout.simple_list_item_1,
                 cursor,
-                new String[] { OpenHelper.COL_TITLE },
-                new int[] { android.R.id.text1 });
+                new String[]{OpenHelper.COL_TITLE},
+                new int[]{android.R.id.text1});
+
+        //Sets the adapter to the listView
 
         listView.setAdapter(adapter);
+
+        //Sets the onItem click to go over to the descriptions activity
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Movie movie = movieDescirption.get(position);
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-           //     intent.putExtra("id", movie.getmId());
+                //     intent.putExtra("id", movie.getmId());
                 intent.putExtra("title", movie.getmTitle());
                 intent.putExtra("plot", movie.getmPlot());
                 intent.putExtra("date", movie.getmDate());
@@ -99,9 +120,13 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("topquote", movie.getmQuote());
                 intent.putExtra("gross", movie.getmGross());
 
+                //Starts the intent
+
                 startActivity(intent);
             }
         });
+
+        //Handels the intent when the user places information into the searchView
 
         handleIntent(getIntent());
 

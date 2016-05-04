@@ -6,7 +6,7 @@ package com.example.austin.harrypotterrev2;
 
 //Creates an object class that defines global variables and the getters/setters for refernce on the main activity.
 
-    //Global variables
+//Global variables
 public class Movie {
     private String mTitle;
     private String mPlot;
