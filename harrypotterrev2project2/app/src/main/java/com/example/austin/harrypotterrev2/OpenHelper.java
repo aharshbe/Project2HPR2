@@ -16,7 +16,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class OpenHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 21;
+    public static final int DATABASE_VERSION = 23;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -93,7 +93,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_DATE, "15 November 2002 (USA)");
         values.put(COL_RUNTIME, "161 min | 174 min (extended)");
         values.put(COL_TOPQUOTE, "Oh well... I'd just been thinking, if you had died, you'd have been welcome to share my toilet.\n" +
-                "― J.K. Rowling, Harry Potter and the Chamber of Secrets, Moaning Myrtle");
+                "― J.K. Rowling");
         values.put(COL_GROSS, "$249,358,727 (USA) (29 October 2004)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 3
@@ -123,7 +123,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_DATE, "11 July 2007 (USA)");
         values.put(COL_RUNTIME, "138 min");
         values.put(COL_TOPQUOTE, "You know, Minister, I disagree with Dumbledore on many counts...but you cannot deny he's got style...\n" +
-                "― J.K. Rowling, Harry Potter and the Order of the Phoenix, Kingsley Shacklebolt");
+                "― J.K. Rowling");
         values.put(COL_GROSS, "$292,000,866 (USA) (7 December 2007)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 6
@@ -133,7 +133,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_DATE, "15 July 2009 (USA)");
         values.put(COL_RUNTIME, "153 min");
         values.put(COL_TOPQUOTE, "Harry was left to ponder in silence the depths to which girls would sink to get revenge. \n" +
-                "― J.K. Rowling, Harry Potter and the Half-Blood Prince\n");
+                "― J.K. Rowling");
         values.put(COL_GROSS, "$301,956,980 (USA) (11 December 2009)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 7
@@ -142,9 +142,8 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Deathly Hallows Part 1");
         values.put(COL_DATE, "15 July 2011 (USA)");
         values.put(COL_RUNTIME, "130 min");
-        values.put(COL_TOPQUOTE, "I'm holey! says George\n" +
-                "Holey? You have the the whole world of ear-related humor before you, you go for holey?\n" +
-                "― J.K. Rowling, Harry Potter and the Deathly Hallows, Fred");
+        values.put(COL_TOPQUOTE, "Do not pity the dead, Harry. Pity the living, and, above all those who live without love.\n" +
+                "― J.K. Rowling");
         values.put(COL_GROSS, "$380,955,619 (USA) (11 November 2011)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 8

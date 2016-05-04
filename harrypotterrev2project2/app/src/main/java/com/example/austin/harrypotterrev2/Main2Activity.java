@@ -54,6 +54,7 @@ public class Main2Activity extends AppCompatActivity {
         title.setText(mTitle);
         title.setTypeface(font);
         plot.setText(mPlot);
+        plot.setTypeface(font);
         date.setText(mDate);
         date.setTypeface(font);
         runtime.setText(mRunTime);
