@@ -92,9 +92,16 @@ public class Main2Activity extends AppCompatActivity {
 
         Cursor cursor = DatabaseHelper.getInstance(this).listMovies();
 
-        ArrayList listMovies = new ArrayList()
+        ArrayList<Movie> movieDescirption = new ArrayList<Movie>();
 
         for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()){
+            Movie  movieToAdd = new Movie();
+            movieToAdd.setmTitle(cursor.getString(cursor.getColumnIndex("title")));
+            movieToAdd.setmPlot(cursor.getString(cursor.getColumnIndex("plot")));
+            movieToAdd.setmDate(cursor.getString(cursor.getColumnIndex("date")));
+            movieToAdd.setmRuntime(cursor.getString(cursor.getColumnIndex("runtime")));
+            movieToAdd.setmQuote(cursor.getString(cursor.getColumnIndex("quote")));
+            movieToAdd.setmGross(cursor.getString(cursor.getColumnIndex("gross")));
 
         }
 
