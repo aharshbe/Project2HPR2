@@ -36,7 +36,7 @@ public class Main2Activity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String mId = intent.getStringExtra("id");
+//        String mId = intent.getStringExtra("id");
         String mTitle = intent.getStringExtra("title");
         String mPlot = intent.getStringExtra("plot");
         String mDate = intent.getStringExtra("date");

@@ -110,15 +110,28 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Movie movie = movieDescirption.get(position);
+//                Movie movie = movieDescirption.get(position);
+//                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+//                //     intent.putExtra("id", movie.getmId());
+//                intent.putExtra("title", movie.getmTitle());
+//                intent.putExtra("plot", movie.getmPlot());
+//                intent.putExtra("date", movie.getmDate());
+//                intent.putExtra("runtime", movie.getmRuntime());
+//                intent.putExtra("topquote", movie.getmQuote());
+//                intent.putExtra("gross", movie.getmGross());
+
+                //Using the cursor instead of my way using the array adapters
+
+                Cursor cursor = adapter.getCursor();
+                cursor.moveToPosition(position);
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                //     intent.putExtra("id", movie.getmId());
-                intent.putExtra("title", movie.getmTitle());
-                intent.putExtra("plot", movie.getmPlot());
-                intent.putExtra("date", movie.getmDate());
-                intent.putExtra("runtime", movie.getmRuntime());
-                intent.putExtra("topquote", movie.getmQuote());
-                intent.putExtra("gross", movie.getmGross());
+                intent.putExtra("title", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_TITLE)));
+                intent.putExtra("plot", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_PLOT)));
+                intent.putExtra("date", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_DATE)));
+                intent.putExtra("runtime", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_RUNTIME)));
+                intent.putExtra("topquote", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_TOPQUOTE)));
+                intent.putExtra("gross", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_GROSS)));
+
 
                 //Starts the intent
 
