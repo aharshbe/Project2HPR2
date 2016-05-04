@@ -92,7 +92,7 @@ public class Main2Activity extends AppCompatActivity {
             movieToAdd.setmPlot(cursor.getString(cursor.getColumnIndex("plot")));
             movieToAdd.setmDate(cursor.getString(cursor.getColumnIndex("date")));
             movieToAdd.setmRuntime(cursor.getString(cursor.getColumnIndex("runtime")));
-            movieToAdd.setmQuote(cursor.getString(cursor.getColumnIndex("quote")));
+            movieToAdd.setmQuote(cursor.getString(cursor.getColumnIndex("topquote")));
             movieToAdd.setmGross(cursor.getString(cursor.getColumnIndex("gross")));
 
             movieDescirption.add(movieToAdd);
