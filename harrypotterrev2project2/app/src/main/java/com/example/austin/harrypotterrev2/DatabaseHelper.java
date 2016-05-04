@@ -54,28 +54,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return instance;
     }
 
-    //If there isn't an instance of the database--null then it creates one
-    // override the SQLiteDatabase's constructor, onCreate, and onUpgrade
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-
-    //Self-explanatory..
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_MOVIES_TABLE);
         setDefaultData(db);
     }
 
-    //Upgrade, to update the table
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + MOVIES_TABLE_NAME);
         this.onCreate(db);
     }
 
-    public void setDefaultData(SQLiteDatabase db){
+    public void setDefaultData(SQLiteDatabase db) {
         ContentValues values = new ContentValues();
 
         //Movie one
@@ -159,7 +154,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(MOVIES_TABLE_NAME, null, values);
     }
 
-    public Cursor listMovies(){
+    public Cursor listMovies() {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -185,7 +180,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(
                 MOVIES_TABLE_NAME, // a. table
                 MOVIES_COLUMNS, // b. column names
-                COL_PLOT + " LIKE ? or " + COL_TITLE + " LIKE ? " + COL_DATE + " LIKE ? " + COL_RUNTIME + " LIKE ? " + COL_TOPQUOTE + " LIKE ? " + COL_GROSS + " LIKE ? " , // c. selections //or // or
+                COL_PLOT + " LIKE ? or " + COL_TITLE + " LIKE ? " + COL_DATE + " LIKE ? " + COL_RUNTIME + " LIKE ? " + COL_TOPQUOTE + " LIKE ? " + COL_GROSS + " LIKE ? ", // c. selections //or // or
                 new String[]{query + "%", query + "%", query + "%", query + "%", query + "%", query + "%"}, // d. selections args
                 null, // e. group by
                 null, // f. having

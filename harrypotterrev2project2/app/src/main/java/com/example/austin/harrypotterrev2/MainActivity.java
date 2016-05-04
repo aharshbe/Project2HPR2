@@ -14,17 +14,14 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ListView listView = (ListView) findViewById(R.id.listView);
-//        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
-//        databaseAccess.open();
-//        List<String> movies = databaseAccess.getGross();
-//        databaseAccess.close();
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, movies);
+
 
         Cursor cursor = DatabaseHelper.getInstance(this).listMovies();
 
@@ -36,14 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-//                startActivity(intent);
-//                return true;
-//            }
-//        });
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

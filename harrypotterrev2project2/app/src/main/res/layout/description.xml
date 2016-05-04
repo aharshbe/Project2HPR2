@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="TITLE"
+        android:id="@+id/title"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PLOT"
+        android:id="@+id/plot"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="DATE"
+        android:id="@+id/date"
+        android:layout_marginBottom="126dp"
+        android:layout_above="@+id/gross"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="RUNTIME"
+        android:id="@+id/runtime"
+        android:layout_marginTop="39dp"
+        android:layout_alignTop="@+id/date"
+        android:layout_alignLeft="@+id/date"
+        android:layout_alignStart="@+id/date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="QUOTE"
+        android:id="@+id/quote"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/runtime"
+        android:layout_alignLeft="@+id/runtime"
+        android:layout_alignStart="@+id/runtime" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="GROSS"
+        android:id="@+id/gross"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/quote"
+        android:layout_alignStart="@+id/quote" />
+
+</RelativeLayout>
