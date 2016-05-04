@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by austin on 5/2/16.
  */
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class OpenHelper extends SQLiteOpenHelper {
     // Define the database name and version
     public static final int DATABASE_VERSION = 21;
     public static final String DATABASE_NAME = "movies.db";
@@ -45,16 +45,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //Creates a constructor
 
-    private static DatabaseHelper instance;
+    private static OpenHelper instance;
 
-    public static DatabaseHelper getInstance(Context context) {
+    public static OpenHelper getInstance(Context context) {
         if (instance == null) {
-            instance = new DatabaseHelper(context);
+            instance = new OpenHelper(context);
         }
         return instance;
     }
 
-    public DatabaseHelper(Context context) {
+    public OpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

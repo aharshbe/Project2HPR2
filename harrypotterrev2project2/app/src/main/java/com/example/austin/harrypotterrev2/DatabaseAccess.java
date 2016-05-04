@@ -22,7 +22,7 @@ public class DatabaseAccess {
      * @param context
      */
     private DatabaseAccess(Context context) {
-        this.openHelper = new DatabaseOpenHelper(context);
+        this.openHelper = new AssetHelper(context);
     }
 
     /**
