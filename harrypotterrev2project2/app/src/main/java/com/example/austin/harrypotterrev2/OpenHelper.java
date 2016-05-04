@@ -11,6 +11,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by austin on 5/2/16.
  */
+
+//Extends the open helper class
+
 public class OpenHelper extends SQLiteOpenHelper {
     // Define the database name and version
     public static final int DATABASE_VERSION = 21;
@@ -69,6 +72,8 @@ public class OpenHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + MOVIES_TABLE_NAME);
         this.onCreate(db);
     }
+
+    //Creates entries for each movie
 
     public void setDefaultData(SQLiteDatabase db) {
         ContentValues values = new ContentValues();
@@ -155,6 +160,8 @@ public class OpenHelper extends SQLiteOpenHelper {
 
     }
 
+    //Creates a cursor for the select query to get the information and query the database for me that displays out each of the columns
+
     public Cursor listMovies() {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -169,10 +176,14 @@ public class OpenHelper extends SQLiteOpenHelper {
                 null, // g. order by
                 null); // h. limit
 
+        //Just creates a dump so I can reference what is being sourced from the database in the console
+
         DatabaseUtils.dumpCursor(cursor);
 
         return cursor;
     }
+
+    //Creates a cursor for the where query to get the information and query the database for me that displays out the information for the search in the searchview
 
     public Cursor searchMovies(String query) {
 
@@ -187,6 +198,8 @@ public class OpenHelper extends SQLiteOpenHelper {
                 null, // f. having
                 null, // g. order by
                 null); // h. limit
+
+        //Just creates a dump so I can reference what is being sourced from the database in the console
 
         DatabaseUtils.dumpCursor(cursor);
 

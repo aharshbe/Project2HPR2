@@ -8,6 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--Only allows one instance of this actvity-->
+
         <activity android:name=".MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
