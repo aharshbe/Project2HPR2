@@ -69,18 +69,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-//        TextView movie1 = (TextView) findViewById(R.id.textView);
-//        TextView movie2 = (TextView) findViewById(R.id.textView2);
-//        TextView movie3 = (TextView) findViewById(R.id.textView3);
-//        TextView movie4 = (TextView) findViewById(R.id.textView4);
-//        TextView movie5 = (TextView) findViewById(R.id.textView5);
-//        TextView movie6 = (TextView) findViewById(R.id.textView6);
-//        TextView movie7 = (TextView) findViewById(R.id.textView7);
-//        TextView movie8 = (TextView) findViewById(R.id.textView8);
-
-        //instantiates new listview references
-
-
         ListView listView = (ListView) findViewById(R.id.listView);
 
         //Creates a new cursor for the listMovies query from the database which grabs the select statement
