@@ -87,8 +87,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Chamber of Secrets");
         values.put(COL_DATE, "15 November 2002 (USA)");
         values.put(COL_RUNTIME, " 161 min | 174 min (extended)");
-        values.put(COL_TOPQUOTE, "'Why, dear boy, we don't send wizards to Azkaban just for blowing up their aunts.'" +
-                "― J.K. Rowling, Harry Potter and the Prisoner of Azkaban, Cornelius Fudge");
+        values.put(COL_TOPQUOTE, "Oh well... I'd just been thinking, if you had died, you'd have been welcome to share my toilet.\n" +
+                "― J.K. Rowling, Harry Potter and the Chamber of Secrets, Moaning Myrtle");
         values.put(COL_GROSS, "$249,358,727 (USA) (29 October 2004)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 3
@@ -133,16 +133,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 7
         values = new ContentValues();
-        values.put(COL_PLOT, "Voldemort's power is growing stronger. He now has control over the Ministry of Magic and Hogwarts. Harry, Ron, and Hermione decide to finish Dumbledore's work and find the rest of the Horcruxes to defeat the Dark Lord. But little hope remains for the Trio, and the rest of the Wizarding World, so everything they do must go as planned. Written by Chris Green");
-        values.put(COL_TITLE, "Harry Potter and the Deathly Hallows part 2");
-        values.put(COL_DATE, "19 November 2010 (USA)");
-        values.put(COL_RUNTIME, " 146 min");
-        values.put(COL_TOPQUOTE, "'Not my daughter, you bitch!'\n" +
-                "― J.K. Rowling, Harry Potter and the Deathly Hallows, Mrs. Weasley");
-        values.put(COL_GROSS, "$294,980,434 (USA) (1 April 2011)");
-        db.insert(MOVIES_TABLE_NAME, null, values);
-        //Movie 8
-        values = new ContentValues();
         values.put(COL_PLOT, "Harry, Ron, and Hermione continue their quest of finding and destroying the Dark Lord's three remaining Horcruxes, the magical items responsible for his immortality. But as the mystical Deathly Hallows are uncovered, and Voldemort finds out about their mission, the biggest battle begins and life as they know it will never be the same again. Written by Jordan");
         values.put(COL_TITLE, "Harry Potter and the Deathly Hallows Part 1");
         values.put(COL_DATE, "15 July 2011 (USA)");
@@ -152,6 +142,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "― J.K. Rowling, Harry Potter and the Deathly Hallows, Fred");
         values.put(COL_GROSS, "$380,955,619 (USA) (11 November 2011)");
         db.insert(MOVIES_TABLE_NAME, null, values);
+        //Movie 8
+        values = new ContentValues();
+        values.put(COL_PLOT, "Voldemort's power is growing stronger. He now has control over the Ministry of Magic and Hogwarts. Harry, Ron, and Hermione decide to finish Dumbledore's work and find the rest of the Horcruxes to defeat the Dark Lord. But little hope remains for the Trio, and the rest of the Wizarding World, so everything they do must go as planned. Written by Chris Green");
+        values.put(COL_TITLE, "Harry Potter and the Deathly Hallows part 2");
+        values.put(COL_DATE, "19 November 2010 (USA)");
+        values.put(COL_RUNTIME, " 146 min");
+        values.put(COL_TOPQUOTE, "'Not my daughter, you bitch!'\n" +
+                "― J.K. Rowling, Harry Potter and the Deathly Hallows, Mrs. Weasley");
+        values.put(COL_GROSS, "$294,980,434 (USA) (1 April 2011)");
+        db.insert(MOVIES_TABLE_NAME, null, values);
+
     }
 
     public Cursor listMovies() {
