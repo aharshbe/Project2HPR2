@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 12;
+    public static final int DATABASE_VERSION = 13;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -77,13 +77,77 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void setDefaultData(SQLiteDatabase db){
         ContentValues values = new ContentValues();
-        values.put(COL_PLOT, "this is the plot");
-        values.put(COL_TITLE, "some title");
-        db.insert(MOVIES_TABLE_NAME, null, values);
 
+        //Movie one
+        values.put(COL_PLOT, "this is the plot");
+        values.put(COL_TITLE, "some tdsfsfsfitle");
+        values.put(COL_DATE, "some date");
+        values.put(COL_RUNTIME, "some runtime");
+        values.put(COL_TOPQUOTE, "some quote");
+        values.put(COL_GROSS, "some gross");
+        db.insert(MOVIES_TABLE_NAME, null, values);
+        //Movie 2
         values = new ContentValues();
-        values.put(COL_PLOT, "this is another plot");
-        values.put(COL_TITLE, "some other title");
+        values.put(COL_PLOT, "this is the plot2");
+        values.put(COL_TITLE, "some title2");
+        values.put(COL_DATE, "some date");
+        values.put(COL_RUNTIME, "some runtime");
+        values.put(COL_TOPQUOTE, "some quote");
+        values.put(COL_GROSS, "some gross");
+        db.insert(MOVIES_TABLE_NAME, null, values);
+        //Movie 3
+        values = new ContentValues();
+        values.put(COL_PLOT, "this is the plot2");
+        values.put(COL_TITLE, "some title2");
+        values.put(COL_DATE, "some date");
+        values.put(COL_RUNTIME, "some runtime");
+        values.put(COL_TOPQUOTE, "some quote");
+        values.put(COL_GROSS, "some gross");
+        db.insert(MOVIES_TABLE_NAME, null, values);
+        //Movie 4
+        values = new ContentValues();
+        values.put(COL_PLOT, "this is the plot2");
+        values.put(COL_TITLE, "some title2");
+        values.put(COL_DATE, "some date");
+        values.put(COL_RUNTIME, "some runtime");
+        values.put(COL_TOPQUOTE, "some quote");
+        values.put(COL_GROSS, "some gross");
+        db.insert(MOVIES_TABLE_NAME, null, values);
+        //Movie 5
+        values = new ContentValues();
+        values.put(COL_PLOT, "this is the plot2");
+        values.put(COL_TITLE, "some title2");
+        values.put(COL_DATE, "some date");
+        values.put(COL_RUNTIME, "some runtime");
+        values.put(COL_TOPQUOTE, "some quote");
+        values.put(COL_GROSS, "some gross");
+        db.insert(MOVIES_TABLE_NAME, null, values);
+        //Movie 6
+        values = new ContentValues();
+        values.put(COL_PLOT, "this is the plot2");
+        values.put(COL_TITLE, "some title2");
+        values.put(COL_DATE, "some date");
+        values.put(COL_RUNTIME, "some runtime");
+        values.put(COL_TOPQUOTE, "some quote");
+        values.put(COL_GROSS, "some gross");
+        db.insert(MOVIES_TABLE_NAME, null, values);
+        //Movie 7
+        values = new ContentValues();
+        values.put(COL_PLOT, "this is the plot2");
+        values.put(COL_TITLE, "some title2");
+        values.put(COL_DATE, "some date");
+        values.put(COL_RUNTIME, "some runtime");
+        values.put(COL_TOPQUOTE, "some quote");
+        values.put(COL_GROSS, "some gross");
+        db.insert(MOVIES_TABLE_NAME, null, values);
+        //Movie 8
+        values = new ContentValues();
+        values.put(COL_PLOT, "this is the plot2");
+        values.put(COL_TITLE, "some title2");
+        values.put(COL_DATE, "some date");
+        values.put(COL_RUNTIME, "some runtime");
+        values.put(COL_TOPQUOTE, "some quote");
+        values.put(COL_GROSS, "some gross");
         db.insert(MOVIES_TABLE_NAME, null, values);
     }
 
