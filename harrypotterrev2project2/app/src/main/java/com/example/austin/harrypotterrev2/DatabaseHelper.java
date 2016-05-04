@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 17;
+    public static final int DATABASE_VERSION = 18;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -118,12 +118,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 5
         values = new ContentValues();
-        values.put(COL_PLOT, "this is the plot2");
-        values.put(COL_TITLE, "some title2");
-        values.put(COL_DATE, "some date");
-        values.put(COL_RUNTIME, "some runtime");
-        values.put(COL_TOPQUOTE, "some quote");
-        values.put(COL_GROSS, "some gross");
+        values.put(COL_PLOT, "After a lonely summer on Privet Drive, Harry returns to a Hogwarts full of ill-fortune. Few of students and parents believe him or Dumbledore that Voldemort is really back. The ministry had decided to step in by appointing a new Defence Against the Dark Arts teacher that proves to be the nastiest person Harry has ever encountered. Harry also can't help stealing glances with the beautiful Cho Chang. To top it off are dreams that Harry can't explain, and a mystery behind something Voldemort is searching for. With these many things Harry begins one of his toughest years at Hogwarts School of Witchcraft and Wizardry. Written by HPfan\n");
+        values.put(COL_TITLE, "Harry Potter and the Order of the Phoenix");
+        values.put(COL_DATE, "11 July 2007 (USA)");
+        values.put(COL_RUNTIME, "138 min");
+        values.put(COL_TOPQUOTE, "'You know, Minister, I disagree with Dumbledore on many counts...but you cannot deny he's got style...'\n" +
+                "― J.K. Rowling, Harry Potter and the Order of the Phoenix, Kingsley Shacklebolt");
+        values.put(COL_GROSS, "$292,000,866 (USA) (7 December 2007)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 6
         values = new ContentValues();
