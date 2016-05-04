@@ -3,6 +3,7 @@ package com.example.austin.harrypotterrev2;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,6 +23,10 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.description);
+
+        //For custom font
+
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
 
         //Creates references for each of the textView that display out the text from the database query
 
@@ -47,11 +52,15 @@ public class Main2Activity extends AppCompatActivity {
         //Sets the text from the key/value pair the the textView
 
         title.setText(mTitle);
+        title.setTypeface(font);
         plot.setText(mPlot);
         date.setText(mDate);
+        date.setTypeface(font);
         runtime.setText(mRunTime);
+        runtime.setTypeface(font);
         topquote.setText(mTopQuote);
         gross.setText(mGross);
+        gross.setTypeface(font);
 
 
 
