@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 15;
+    public static final int DATABASE_VERSION = 16;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -98,12 +98,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 3
         values = new ContentValues();
-        values.put(COL_PLOT, "this is the plot2");
-        values.put(COL_TITLE, "some title2");
-        values.put(COL_DATE, "some date");
-        values.put(COL_RUNTIME, "some runtime");
-        values.put(COL_TOPQUOTE, "some quote");
-        values.put(COL_GROSS, "some gross");
+        values.put(COL_PLOT, "Harry Potter is having a tough time with his relatives (yet again). He runs away after using magic to inflate Uncle Vernon's sister Marge who was being offensive towards Harry's parents. Initially scared for using magic outside the school, he is pleasantly surprised that he won't be penalized after all. However, he soon learns that a dangerous criminal and Voldemort's trusted aide Sirius Black has escaped from the Azkaban prison and wants to kill Harry to avenge the Dark Lord. To worsen the conditions for Harry, vile creatures called Dementors are appointed to guard the school gates and inexplicably happen to have the most horrible effect on him. Little does Harry know that by the end of this year, many holes in his past (whatever he knows of it) will be filled up and he will have a clearer vision of what the future has in store... Written by Soumitra");
+        values.put(COL_TITLE, "Harry Potter and the Prisoner of Azkaban");
+        values.put(COL_DATE, "4 June 2004 (USA)");
+        values.put(COL_RUNTIME, "142 min");
+        values.put(COL_TOPQUOTE, "'Why, dear boy, we don't send wizards to Azkaban just for blowing up their aunts.'\n" +
+                "― J.K. Rowling, Harry Potter and the Prisoner of Azkaban, Cornelius Fudge");
+        values.put(COL_GROSS, "$249,358,727 (USA) (29 October 2004)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 4
         values = new ContentValues();
