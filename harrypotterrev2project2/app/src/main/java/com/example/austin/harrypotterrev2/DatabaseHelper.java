@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 14;
+    public static final int DATABASE_VERSION = 15;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -88,12 +88,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 2
         values = new ContentValues();
-        values.put(COL_PLOT, "this is the plot2");
-        values.put(COL_TITLE, "some title2");
-        values.put(COL_DATE, "some date");
-        values.put(COL_RUNTIME, "some runtime");
-        values.put(COL_TOPQUOTE, "some quote");
-        values.put(COL_GROSS, "some gross");
+        values.put(COL_PLOT, "Forced to spend his summer holidays with his muggle relations, Harry Potter gets a real shock when he gets a surprise visitor: Dobby the house-elf, who warns Harry Potter against returning to Hogwarts, for terrible things are going to happen. Harry decides to ignore Dobby's warning and continues with his pre-arranged schedule. But at Hogwarts, strange and terrible things are indeed happening: Harry is suddenly hearing mysterious voices from inside the walls, muggle-born students are being attacked, and a message scrawled on the wall in blood puts everyone on his/her guard - 'The Chamber Of Secrets Has Been Opened. Enemies Of The Heir, Beware' . Written by Soumitra");
+        values.put(COL_TITLE, "Harry Potter and the Chamber of Secrets");
+        values.put(COL_DATE, "15 November 2002 (USA)");
+        values.put(COL_RUNTIME, " 161 min | 174 min (extended)");
+        values.put(COL_TOPQUOTE, "'Why, dear boy, we don't send wizards to Azkaban just for blowing up their aunts.'" +
+                "― J.K. Rowling, Harry Potter and the Prisoner of Azkaban, Cornelius Fudge");
+        values.put(COL_GROSS, "$249,358,727 (USA) (29 October 2004)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 3
         values = new ContentValues();
