@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Main2Activity"></activity>
+        <meta-data android:name="android.app.searchable"
+            android:resource="@xml/searchable" />
     </application>
 
 </manifest>
