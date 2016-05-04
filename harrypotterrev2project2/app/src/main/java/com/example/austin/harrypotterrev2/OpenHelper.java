@@ -95,7 +95,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values = new ContentValues();
         values.put(COL_PLOT, "Forced to spend his summer holidays with his muggle relations, Harry Potter gets a real shock when he gets a surprise visitor: Dobby the house-elf, who warns Harry Potter against returning to Hogwarts, for terrible things are going to happen. Harry decides to ignore Dobby's warning and continues with his pre-arranged schedule. But at Hogwarts, strange and terrible things are indeed happening: Harry is suddenly hearing mysterious voices from inside the walls, muggle-born students are being attacked, and a message scrawled on the wall in blood puts everyone on his/her guard - 'The Chamber Of Secrets Has Been Opened. Enemies Of The Heir, Beware");
         values.put(COL_TITLE, "Harry Potter and the Chamber of Secrets");
-        values.put(COL_COVER, "");
+        values.put(COL_COVER, "movie2");
         values.put(COL_DATE, "15 November 2002 (USA)");
         values.put(COL_RUNTIME, "161 min | 174 min (extended)");
         values.put(COL_TOPQUOTE, "Oh well... I'd just been thinking, if you had died, you'd have been welcome to share my toilet.\n" +
@@ -106,7 +106,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values = new ContentValues();
         values.put(COL_PLOT, "Harry Potter is having a tough time with his relatives (yet again). He runs away after using magic to inflate Uncle Vernon's sister Marge who was being offensive towards Harry's parents. Initially scared for using magic outside the school, he is pleasantly surprised that he won't be penalized after all. However, he soon learns that a dangerous criminal and Voldemort's trusted aide Sirius Black has escaped from the Azkaban prison and wants to kill Harry to avenge the Dark Lord.");
         values.put(COL_TITLE, "Harry Potter and the Prisoner of Azkaban");
-        values.put(COL_COVER, "");
+        values.put(COL_COVER, "movie3");
         values.put(COL_DATE, "4 June 2004 (USA)");
         values.put(COL_RUNTIME, "142 min");
         values.put(COL_TOPQUOTE, "Why, dear boy, we don't send wizards to Azkaban just for blowing up their aunts.\n" +
@@ -117,7 +117,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values = new ContentValues();
         values.put(COL_PLOT, "Harry's fourth year at Hogwarts is about to start and he is enjoying the summer vacation with his friends. They get the tickets to The Quidditch World Cup Final but after the match is over, people dressed like Lord Voldemort's 'Death Eaters' set a fire to all the visitors' tents, coupled with the appearance of Voldemort's symbol, the 'Dark Mark' in the sky, which causes a frenzy across the magical community. That same year, Hogwarts is hosting 'The Triwizard Tournament'. The contestants have to be above the age of 17, and are chosen by a magical object called Goblet of Fire.");
         values.put(COL_TITLE, "Harry Potter and the Goblet of Fire");
-        values.put(COL_COVER, "");
+        values.put(COL_COVER, "movie4");
         values.put(COL_DATE, "18 November 2005 (USA)");
         values.put(COL_RUNTIME, "157 min");
         values.put(COL_TOPQUOTE, "Just then Neville caused a slight diversion by turning into a large canary.\n" +
@@ -128,7 +128,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values = new ContentValues();
         values.put(COL_PLOT, "After a lonely summer on Privet Drive, Harry returns to a Hogwarts full of ill-fortune. Few of students and parents believe him or Dumbledore that Voldemort is really back. The ministry had decided to step in by appointing a new Defence Against the Dark Arts teacher that proves to be the nastiest person Harry has ever encountered. Harry also can't help stealing glances with the beautiful Cho Chang. To top it off are dreams that Harry can't explain, and a mystery behind something Voldemort is searching for. With these many things Harry begins one of his toughest years at Hogwarts School of Witchcraft and Wizardry.");
         values.put(COL_TITLE, "Harry Potter and the Order of the Phoenix");
-        values.put(COL_COVER, "");
+        values.put(COL_COVER, "movie5");
         values.put(COL_DATE, "11 July 2007 (USA)");
         values.put(COL_RUNTIME, "138 min");
         values.put(COL_TOPQUOTE, "You know, Minister, I disagree with Dumbledore on many counts...but you cannot deny he's got style...\n" +
@@ -139,7 +139,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values = new ContentValues();
         values.put(COL_PLOT, "In the sixth year at Hogwarts School of Witchcraft, and in both wizard and muggle worlds Lord Voldemort and his henchmen are increasingly active. With vacancies to fill at Hogwarts, Professor Dumbledore persuades Horace Slughorn, back from retirement to become the potions teacher, while Professor Snape receives long awaited news. Harry Potter, together with Dumbledore, must face treacherous tasks to defeat his evil nemesis.");
         values.put(COL_TITLE, "Harry Potter and the Half Blood Prince");
-        values.put(COL_COVER, "");
+        values.put(COL_COVER, "movie6");
         values.put(COL_DATE, "15 July 2009 (USA)");
         values.put(COL_RUNTIME, "153 min");
         values.put(COL_TOPQUOTE, "Harry was left to ponder in silence the depths to which girls would sink to get revenge. \n" +
@@ -150,7 +150,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values = new ContentValues();
         values.put(COL_PLOT, "Harry, Ron, and Hermione continue their quest of finding and destroying the Dark Lord's three remaining Horcruxes, the magical items responsible for his immortality. But as the mystical Deathly Hallows are uncovered, and Voldemort finds out about their mission, the biggest battle begins and life as they know it will never be the same again.");
         values.put(COL_TITLE, "Harry Potter and the Deathly Hallows Part 1");
-        values.put(COL_COVER, "");
+        values.put(COL_COVER, "movie7");
         values.put(COL_DATE, "15 July 2011 (USA)");
         values.put(COL_RUNTIME, "130 min");
         values.put(COL_TOPQUOTE, "Do not pity the dead, Harry. Pity the living, and, above all those who live without love.\n" +
@@ -161,7 +161,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values = new ContentValues();
         values.put(COL_PLOT, "Voldemort's power is growing stronger. He now has control over the Ministry of Magic and Hogwarts. Harry, Ron, and Hermione decide to finish Dumbledore's work and find the rest of the Horcruxes to defeat the Dark Lord. But little hope remains for the Trio, and the rest of the Wizarding World, so everything they do must go as planned.");
         values.put(COL_TITLE, "Harry Potter and the Deathly Hallows part 2");
-        values.put(COL_COVER, "");
+        values.put(COL_COVER, "movie8");
         values.put(COL_DATE, "19 November 2010 (USA)");
         values.put(COL_RUNTIME, "146 min");
         values.put(COL_TOPQUOTE, "Not my daughter, you bitch!\n" +

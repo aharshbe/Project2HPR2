@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
             public void bindView(View view, Context context, Cursor cursor) {
                 TextView movieTitle = (TextView) view.findViewById(R.id.MovieName);
                 ImageView movieCursor = (ImageView) view.findViewById(R.id.movieCover);
+                int returningImage = AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("movie1")))
                 String movie1 = cursor.getString(cursor.getColumnIndex("title"));
                 movieTitle.setText(movie1);
 

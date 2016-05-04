@@ -4,8 +4,8 @@ package com.example.austin.harrypotterrev2;
  * Created by austin on 5/4/16.
  */
 public class AddingImages {
-    public static int getDrawable(String image){
-        switch (image){
+    public static int getDrawable(String image) {
+        switch (image) {
             case "movie1":
                 return R.drawable.hpv1sor;
             case "movie2":
@@ -24,14 +24,6 @@ public class AddingImages {
                 return R.drawable.hpmv8;
             default:
                 return 0;
-
-
-
-
-
-
-
-
 
         }
 
