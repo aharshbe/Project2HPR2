@@ -45,7 +45,7 @@ public class Main2Activity extends AppCompatActivity {
 //                TextView runtime = (TextView) findViewById(R.id.runtime);
 //                TextView quote = (TextView) findViewById(R.id.quote);
 //                TextView gross = (TextView) findViewById(R.id.gross);
-//
+
 //
 //                if (title != null) {
 //                    title.setText(cursor.getmTitle());
@@ -80,12 +80,14 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.description);
 
-
-        Cursor cursor = DatabaseHelper.getInstance(this).listMovies();
-
-        ArrayList<Movie> movieDescirption = new ArrayList<Movie>();
+        TextView title = (TextView) findViewById(R.id.title);
+        TextView plot = (TextView) findViewById(R.id.plot);
+        TextView date = (TextView) findViewById(R.id.date);
+        TextView runtime = (TextView) findViewById(R.id.runtime);
+        TextView quote = (TextView) findViewById(R.id.quote);
+        TextView gross = (TextView) findViewById(R.id.gross);
 
         Intent intent = getIntent();
 
@@ -98,6 +100,12 @@ public class Main2Activity extends AppCompatActivity {
         String mGross = intent.getStringExtra("gross");
 
 
+        title.setText(mTitle);
+        plot.setText(mPlot);
+        date.setText(mDate);
+        runtime.setText(mRunTime);
+        quote.setText(mTopQuote);
+        gross.setText(mGross);
 
 
 
