@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 20;
+    public static final int DATABASE_VERSION = 21;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -78,7 +78,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Sorcerer's Stone");
         values.put(COL_DATE, "16 November 2001 (USA)");
         values.put(COL_RUNTIME, "152 min | 159 min (extended)");
-        values.put(COL_TOPQUOTE, "'It does not do to dwell on dreams and forget to live.' — Harry Potter and the Sorcerer's Stone, Dumbledore");
+        values.put(COL_TOPQUOTE, "It does not do to dwell on dreams and forget to live.\n  — Harry Potter and the Sorcerer's Stone, Dumbledore");
         values.put(COL_GROSS, "$317,557,891 (USA) (17 May 2002)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 2
@@ -86,7 +86,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_PLOT, "Forced to spend his summer holidays with his muggle relations, Harry Potter gets a real shock when he gets a surprise visitor: Dobby the house-elf, who warns Harry Potter against returning to Hogwarts, for terrible things are going to happen. Harry decides to ignore Dobby's warning and continues with his pre-arranged schedule. But at Hogwarts, strange and terrible things are indeed happening: Harry is suddenly hearing mysterious voices from inside the walls, muggle-born students are being attacked, and a message scrawled on the wall in blood puts everyone on his/her guard - 'The Chamber Of Secrets Has Been Opened. Enemies Of The Heir, Beware");
         values.put(COL_TITLE, "Harry Potter and the Chamber of Secrets");
         values.put(COL_DATE, "15 November 2002 (USA)");
-        values.put(COL_RUNTIME, " 161 min | 174 min (extended)");
+        values.put(COL_RUNTIME, "161 min | 174 min (extended)");
         values.put(COL_TOPQUOTE, "Oh well... I'd just been thinking, if you had died, you'd have been welcome to share my toilet.\n" +
                 "― J.K. Rowling, Harry Potter and the Chamber of Secrets, Moaning Myrtle");
         values.put(COL_GROSS, "$249,358,727 (USA) (29 October 2004)");
@@ -97,7 +97,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Prisoner of Azkaban");
         values.put(COL_DATE, "4 June 2004 (USA)");
         values.put(COL_RUNTIME, "142 min");
-        values.put(COL_TOPQUOTE, "'Why, dear boy, we don't send wizards to Azkaban just for blowing up their aunts.'\n" +
+        values.put(COL_TOPQUOTE, "Why, dear boy, we don't send wizards to Azkaban just for blowing up their aunts.\n" +
                 "― J.K. Rowling, Harry Potter and the Prisoner of Azkaban, Cornelius Fudge");
         values.put(COL_GROSS, "$249,358,727 (USA) (29 October 2004)");
         db.insert(MOVIES_TABLE_NAME, null, values);
@@ -107,9 +107,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Goblet of Fire");
         values.put(COL_DATE, "18 November 2005 (USA)");
         values.put(COL_RUNTIME, "157 min");
-        values.put(COL_TOPQUOTE, "'Just then Neville caused a slight diversion by turning into a large canary.'\n" +
+        values.put(COL_TOPQUOTE, "Just then Neville caused a slight diversion by turning into a large canary.\n" +
                 "― J.K. Rowling, Harry Potter and the Goblet of Fire");
-        values.put(COL_GROSS, " $289,994,397 (USA) (31 March 2006)");
+        values.put(COL_GROSS, "$289,994,397 (USA) (31 March 2006)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 5
         values = new ContentValues();
@@ -117,7 +117,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Order of the Phoenix");
         values.put(COL_DATE, "11 July 2007 (USA)");
         values.put(COL_RUNTIME, "138 min");
-        values.put(COL_TOPQUOTE, "'You know, Minister, I disagree with Dumbledore on many counts...but you cannot deny he's got style...'\n" +
+        values.put(COL_TOPQUOTE, "You know, Minister, I disagree with Dumbledore on many counts...but you cannot deny he's got style...\n" +
                 "― J.K. Rowling, Harry Potter and the Order of the Phoenix, Kingsley Shacklebolt");
         values.put(COL_GROSS, "$292,000,866 (USA) (7 December 2007)");
         db.insert(MOVIES_TABLE_NAME, null, values);
@@ -127,7 +127,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Half Blood Prince");
         values.put(COL_DATE, "15 July 2009 (USA)");
         values.put(COL_RUNTIME, "153 min");
-        values.put(COL_TOPQUOTE, "'Harry was left to ponder in silence the depths to which girls would sink to get revenge.' \n" +
+        values.put(COL_TOPQUOTE, "Harry was left to ponder in silence the depths to which girls would sink to get revenge. \n" +
                 "― J.K. Rowling, Harry Potter and the Half-Blood Prince\n");
         values.put(COL_GROSS, "$301,956,980 (USA) (11 December 2009)");
         db.insert(MOVIES_TABLE_NAME, null, values);
@@ -137,8 +137,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Deathly Hallows Part 1");
         values.put(COL_DATE, "15 July 2011 (USA)");
         values.put(COL_RUNTIME, "130 min");
-        values.put(COL_TOPQUOTE, "'I'm holey!' says George\n" +
-                "'Holey? You have the the whole world of ear-related humor before you, you go for holey?'\n" +
+        values.put(COL_TOPQUOTE, "I'm holey! says George\n" +
+                "Holey? You have the the whole world of ear-related humor before you, you go for holey?\n" +
                 "― J.K. Rowling, Harry Potter and the Deathly Hallows, Fred");
         values.put(COL_GROSS, "$380,955,619 (USA) (11 November 2011)");
         db.insert(MOVIES_TABLE_NAME, null, values);
@@ -147,8 +147,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_PLOT, "Voldemort's power is growing stronger. He now has control over the Ministry of Magic and Hogwarts. Harry, Ron, and Hermione decide to finish Dumbledore's work and find the rest of the Horcruxes to defeat the Dark Lord. But little hope remains for the Trio, and the rest of the Wizarding World, so everything they do must go as planned.");
         values.put(COL_TITLE, "Harry Potter and the Deathly Hallows part 2");
         values.put(COL_DATE, "19 November 2010 (USA)");
-        values.put(COL_RUNTIME, " 146 min");
-        values.put(COL_TOPQUOTE, "'Not my daughter, you bitch!'\n" +
+        values.put(COL_RUNTIME, "146 min");
+        values.put(COL_TOPQUOTE, "Not my daughter, you bitch!\n" +
                 "― J.K. Rowling, Harry Potter and the Deathly Hallows, Mrs. Weasley");
         values.put(COL_GROSS, "$294,980,434 (USA) (1 April 2011)");
         db.insert(MOVIES_TABLE_NAME, null, values);
