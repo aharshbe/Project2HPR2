@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
 
-        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+
 
         //ref for the search view and instantiates the search manager
 
@@ -117,7 +117,9 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void bindView(View view, Context context, Cursor cursor) {
+                    Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
                     TextView movieTitle = (TextView) view.findViewById(R.id.MovieName);
+                    movieTitle.setTypeface(font);
                     ImageView movieCover = (ImageView) view.findViewById(R.id.movieCover);
                     int returningImage = AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("cover")));
                     String movie1 = cursor.getString(cursor.getColumnIndex("title"));
@@ -175,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         //Handels the intent when the user places information into the searchView
 
         handleIntent(getIntent());
+
 
 
     }
