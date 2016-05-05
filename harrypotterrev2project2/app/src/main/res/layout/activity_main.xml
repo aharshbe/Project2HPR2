@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.austin.harrypotterrev2.MainActivity">
+    tools:context="com.example.austin.harrypotterrev2.MainActivity"
+    android:background="@drawable/backgroundhdhogwarts">
 
     <ListView
         android:id="@+id/listView"
