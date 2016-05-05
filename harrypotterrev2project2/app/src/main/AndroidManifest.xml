@@ -33,7 +33,11 @@
         <activity android:name=".BooksActivity" />
         <activity android:name=".bookDescription" />
         <activity android:name=".bookDescription2" />
-        <activity android:name=".bookDescription3"></activity>
+        <activity android:name=".bookDescription3" />
+        <activity android:name=".QuotesActivity" />
+        <activity android:name=".quoteDescription" />
+        <activity android:name=".dobbyDescription" />
+        <activity android:name=".snapeDescription"></activity>
     </application>
 
 </manifest>
