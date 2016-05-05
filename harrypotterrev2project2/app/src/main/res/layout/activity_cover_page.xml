@@ -5,12 +5,18 @@
     android:layout_height="match_parent"
     tools:context="com.example.austin.harrypotterrev2.CoverPage">
 
-    <ImageView
-    android:layout_width="350dp"
-    android:layout_height="110dp"
-    android:id="@+id/title"
-    android:background="@drawable/titlehp"
-    android:onClick="whenHPClicked" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HarryPotter"
+        android:textColor="#B8860B"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:textSize="112sp"
+        android:onClick="whenHPClicked"/>
     <TextView
         android:layout_width="150dp"
         android:layout_height="70dp"
