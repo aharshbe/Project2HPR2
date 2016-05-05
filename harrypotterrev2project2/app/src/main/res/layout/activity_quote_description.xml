@@ -7,6 +7,63 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.austin.harrypotterrev2.quoteDescription">
+    tools:context="com.example.austin.harrypotterrev2.quoteDescription"
+    android:background="@drawable/dumbledorebackground">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:id="@+id/textduble"
+        android:background="@drawable/dumbledore"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="clickingdumbledore"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagequotedumbl"
+        android:background="@drawable/dumbledore2"
+        android:onClick="clickingdumbledore"
+        android:layout_below="@+id/textduble"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:id="@+id/imagequotedumb2"
+        android:background="@drawable/dumbledore3"
+        android:onClick="clickingdumbledore"
+        android:layout_above="@+id/dumblquote2"
+        android:layout_alignRight="@+id/dumblquote1"
+        android:layout_alignEnd="@+id/dumblquote1"
+        android:layout_marginRight="31dp"
+        android:layout_marginEnd="31dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="'Words are, in my not-so-humble opinion, our most inexhaustible source of magic. Capable of both inflicting injury, and remedying it.' — Harry Potter and the Deathly Hallows"
+        android:textColor="#00008B"
+        android:id="@+id/dumblquote1"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:layout_below="@+id/imagequotedumbl"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="'Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.' — Harry Potter and the Prisoner of Azkaban"
+        android:textColor="#4B0082"
+        android:id="@+id/dumblquote2"
+        android:fontFamily="cursive"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
