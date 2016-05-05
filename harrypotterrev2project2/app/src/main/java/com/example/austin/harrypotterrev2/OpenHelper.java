@@ -18,7 +18,7 @@ import java.sql.Blob;
 
 public class OpenHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 26;
+    public static final int DATABASE_VERSION = 28;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -88,7 +88,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_COVER, "movie1");
         values.put(COL_DATE, "16 November 2001 (USA)");
         values.put(COL_RUNTIME, "152 min | 159 min (extended)");
-        values.put(COL_TOPQUOTE, "It does not do to dwell on dreams and forget to live.\n  — Harry Potter and the Sorcerer's Stone, Dumbledore");
+        values.put(COL_TOPQUOTE, "It does not do to dwell on dreams and forget to live.\n  —Dumbledore");
         values.put(COL_GROSS, "$317,557,891 (USA) (17 May 2002)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 2
@@ -99,7 +99,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_DATE, "15 November 2002 (USA)");
         values.put(COL_RUNTIME, "161 min | 174 min (extended)");
         values.put(COL_TOPQUOTE, "Oh well... I'd just been thinking, if you had died, you'd have been welcome to share my toilet.\n" +
-                "― J.K. Rowling");
+                "-Moaning Murtle");
         values.put(COL_GROSS, "$249,358,727 (USA) (29 October 2004)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 3
@@ -110,7 +110,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_DATE, "4 June 2004 (USA)");
         values.put(COL_RUNTIME, "142 min");
         values.put(COL_TOPQUOTE, "Why, dear boy, we don't send wizards to Azkaban just for blowing up their aunts.\n" +
-                "― J.K. Rowling, Harry Potter and the Prisoner of Azkaban, Cornelius Fudge");
+                "―Cornelius Fudge");
         values.put(COL_GROSS, "$249,358,727 (USA) (29 October 2004)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 4
@@ -132,7 +132,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_DATE, "11 July 2007 (USA)");
         values.put(COL_RUNTIME, "138 min");
         values.put(COL_TOPQUOTE, "You know, Minister, I disagree with Dumbledore on many counts...but you cannot deny he's got style...\n" +
-                "― J.K. Rowling");
+                "―Kingsley Shacklebolt ");
         values.put(COL_GROSS, "$292,000,866 (USA) (7 December 2007)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 6
@@ -154,7 +154,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_DATE, "15 July 2011 (USA)");
         values.put(COL_RUNTIME, "130 min");
         values.put(COL_TOPQUOTE, "Do not pity the dead, Harry. Pity the living, and, above all those who live without love.\n" +
-                "― J.K. Rowling");
+                "― Dumbledore");
         values.put(COL_GROSS, "$380,955,619 (USA) (11 November 2011)");
         db.insert(MOVIES_TABLE_NAME, null, values);
         //Movie 8
@@ -165,7 +165,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         values.put(COL_DATE, "19 November 2010 (USA)");
         values.put(COL_RUNTIME, "146 min");
         values.put(COL_TOPQUOTE, "Not my daughter, you bitch!\n" +
-                "― J.K. Rowling, Harry Potter and the Deathly Hallows, Mrs. Weasley");
+                "― Mrs. Weasley");
         values.put(COL_GROSS, "$294,980,434 (USA) (1 April 2011)");
         db.insert(MOVIES_TABLE_NAME, null, values);
 
