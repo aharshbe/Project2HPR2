@@ -17,8 +17,10 @@ public class CoverPage extends AppCompatActivity {
         Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
         TextView movies = (TextView) findViewById(R.id.mvoies);
         TextView books = (TextView) findViewById(R.id.books);
+        TextView quotes = (TextView) findViewById(R.id.quotes);
         movies.setTypeface(font);
         books.setTypeface(font);
+        quotes.setTypeface(font);
     }
 
     public void clickingTextView(View view) {
