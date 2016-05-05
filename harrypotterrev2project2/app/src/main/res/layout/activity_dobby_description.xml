@@ -9,23 +9,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.austin.harrypotterrev2.dobbyDescription"
     android:background="@drawable/dobby5">
-    <ImageView
-        android:id="@+id/textduble"
+    <TextView
+        android:id="@+id/dobby"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/dobbytext"
+        android:text="Dobby"
+        android:textColor="#B8860B"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:textSize="90sp"
         android:onClick="clickingdobby" />
 
     <ImageView
         android:id="@+id/imagequotedobby"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/textduble"
-        android:layout_centerVertical="true"
-        android:background="@drawable/dobby2" />
+        android:background="@drawable/dobby2"
+        android:layout_below="@+id/dobby"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/imagequotedobby2"
