@@ -49,7 +49,7 @@
         android:layout_width="70dp"
         android:layout_height="80dp"
         android:id="@+id/book1cover"
-        android:background="@drawable/book1hp"
+        android:background="@drawable/bcoverhd"
         android:layout_below="@+id/bookstitle"
         android:layout_alignRight="@+id/bookstitle"
         android:layout_alignEnd="@+id/bookstitle"

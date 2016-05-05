@@ -63,12 +63,13 @@
         android:onClick="clickingsnape"/>
     <ImageView
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="110dp"
         android:id="@+id/char2"
         android:background="@drawable/snapeimage"
         android:layout_below="@+id/char1"
         android:layout_toRightOf="@+id/quote2"
         android:layout_toEndOf="@+id/quote2"
+        android:layout_marginTop="5dp"
         android:onClick="clickingsnape"/>
     <TextView
         android:layout_width="200dp"
@@ -87,13 +88,14 @@
         android:layout_marginBottom="34dp"
         android:onClick="goingtodobby"/>
     <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:id="@+id/char3"
         android:background="@drawable/dobby"
         android:layout_alignTop="@+id/quote3"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
         android:onClick="goingtodobby"/>
 
 
