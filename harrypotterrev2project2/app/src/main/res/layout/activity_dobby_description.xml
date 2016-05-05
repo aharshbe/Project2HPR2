@@ -7,6 +7,58 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.austin.harrypotterrev2.dobbyDescription">
+    tools:context="com.example.austin.harrypotterrev2.dobbyDescription"
+    android:background="@drawable/dobby5">
+    <ImageView
+        android:id="@+id/textduble"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dobbytext"
+        android:onClick="clickingdobby" />
+
+    <ImageView
+        android:id="@+id/imagequotedobby"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textduble"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dobby2" />
+
+    <ImageView
+        android:id="@+id/imagequotedobby2"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/dobby2"
+        android:layout_alignRight="@+id/dobby2"
+        android:layout_below="@+id/imagequotedobby"
+        android:background="@drawable/dobby3" />
+
+    <TextView
+        android:id="@+id/dobby1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="'Yes, Harry Potter!' said Dobby at once, his great eyes shining with excitement. 'And if Dobby does it wrong, Dobby will throw himself off the topmost tower, Harry Potter!' 'There won’t be any need for that,” said Harry hastily.'
+― J.K. Rowling, Harry Potter and the Half-Blood Prince"
+        android:textColor="#B8860B" />
+
+    <TextView
+        android:id="@+id/dobby2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:fontFamily="cursive"
+        android:text="''But Dobby shouted, 'You shall not harm Harry Potter! ... He got up, face livid, and pulled out his wand, but Dobby raised a long, threatening finger. 'You shall go now,' he said fiercely, pointing down at Mr. Malfoy. 'You shall not touch Harry Potter. You shall go now.'
+    ― J.K. Rowling, Harry Potter and the Chamber of Secrets"
+        android:textColor="#B8860B"
+        android:textSize="15sp" />
+
 
 </RelativeLayout>
