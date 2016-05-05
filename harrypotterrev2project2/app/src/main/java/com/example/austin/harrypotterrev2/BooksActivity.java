@@ -17,7 +17,11 @@ public class BooksActivity extends AppCompatActivity {
         Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
         TextView title = (TextView) findViewById(R.id.bookstitle);
         TextView book1 = (TextView) findViewById(R.id.book1);
+        TextView book2 = (TextView) findViewById(R.id.book2);
+        TextView book3 = (TextView) findViewById(R.id.book3);
         book1.setTypeface(font);
+        book2.setTypeface(font);
+        book3.setTypeface(font);
         title.setTypeface(font);
 
 
