@@ -7,6 +7,59 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.austin.harrypotterrev2.bookDescription2">
+    tools:context="com.example.austin.harrypotterrev2.bookDescription2"
+    android:background="@drawable/background7">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to books"
+        android:id="@+id/backbutton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="booksback2"
+        />
+
+    <TextView
+        android:id="@+id/description1"
+        android:layout_marginTop="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="After a marvelous year at Hogwarts School of Witchcraft and Wizardry, Harry Potter is stuck spending summer break with his awful Muggle (non-wizard) aunt and uncle, Petunia and Vernon Dursley, and his equally horrid cousin, Dudley. On July 31, it's Harry's birthday, but no one remembers. All the Dursleys care about is their guests for the evening: important clients for Uncle Vernon's drill business. Uncle Vernon tells Harry to sit in his room and pretend he doesn't exist – he doesn't want Harry's freakishness (i.e., magic) wrecking his business. When Harry retreats to his room to stay out of the way, though, he finds someone unexpected waiting there: a house-elf named Dobby.
+"
+        android:layout_centerHorizontal="true"
+        android:textColor="#F0FFFF"
+        android:textSize="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="House-elves are bound in servitude to wizarding families. This particular house-elf has sneaked away from his Dark wizard family to warn Harry that something bad is coming to Hogwarts this school year. Harry can't go back to Hogwarts for his own safety; Dobby is determined to keep the Boy-Who-Lived alive. Harry doesn't care about random threats from the arch-nemesis who killed his parents, Lord Voldemort; he just desperately has to get away from the Dursleys and back to his best friends at school. Dobby is disappointed Harry won't promise not to return to Hogwarts. So Dobby takes desperate measures: he casts a charm that ruins the Dursleys' dinner party. Uncle Vernon loses his deal, and he blames Harry. So Uncle Vernon shuts Harry up in his bedroom with bars on the windows. He promises Harry will never get out."
+        android:textColor="#F0FFFF"
+        android:textSize="10dp"
+        android:layout_below="@+id/description1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+        android:id="@+id/book1cover"
+        android:background="@drawable/book2cover"
+        android:layout_below="@+id/bookstitle"
+        android:layout_alignRight="@+id/bookstitle"
+        android:layout_alignEnd="@+id/bookstitle"
+        android:onClick="booksback2"/>
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="117dp"
+        android:id="@+id/coolimage"
+        android:background="@drawable/polyjuicepotion"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
