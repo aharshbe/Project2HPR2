@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
 
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+
         //ref for the search view and instantiates the search manager
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);

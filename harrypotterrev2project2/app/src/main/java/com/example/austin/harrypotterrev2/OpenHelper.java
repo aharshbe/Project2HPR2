@@ -34,7 +34,7 @@ public class OpenHelper extends SQLiteOpenHelper {
 
 
     //Creating an array of the different columns
-    public static final String[] MOVIES_COLUMNS = {COL_ID, COL_TITLE, COL_PLOT, COL_DATE, COL_RUNTIME, COL_TOPQUOTE, COL_GROSS};
+    public static final String[] MOVIES_COLUMNS = {COL_ID, COL_TITLE, COL_COVER, COL_PLOT, COL_DATE, COL_RUNTIME, COL_TOPQUOTE, COL_GROSS};
 
 
     //Adds create table information for each of the colums
