@@ -1,9 +1,11 @@
 package com.example.austin.harrypotterrev2;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class CoverPage extends AppCompatActivity {
@@ -12,6 +14,11 @@ public class CoverPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cover_page);
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+        TextView movies = (TextView) findViewById(R.id.mvoies);
+        TextView books = (TextView) findViewById(R.id.books);
+        movies.setTypeface(font);
+        books.setTypeface(font);
     }
 
     public void clickingTextView(View view) {
