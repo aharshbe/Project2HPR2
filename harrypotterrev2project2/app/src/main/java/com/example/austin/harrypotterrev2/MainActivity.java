@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Region;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ArrayList<Movie> movieDescirption;
     CursorAdapter adapter;
+    ListView listView;
 
     //Creates an override method for the search manager that allows the inflation of the information in the searchView to be translated to the searchView and then references it
 
@@ -42,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
         return true;
-
-
     }
 
     //Creates override method for when new intent is made
@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ListView listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.listView);
+
 
         //Creates a new cursor for the listMovies query from the database which grabs the select statement
 
@@ -100,28 +101,35 @@ public class MainActivity extends AppCompatActivity {
 
         //Creates the adapter to utilize the cursor
 
-        adapter = new CursorAdapter(this, cursor, 0) {
+        if (adapter == null){
+
+            adapter = new CursorAdapter(this, cursor, 0) {
 
 
-            @Override
-            public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
-                LayoutInflater layoutInflater = LayoutInflater.from(context);
-                View view = layoutInflater.inflate(R.layout.movies, viewGroup, false);
-                return view;
-            }
+                @Override
+                public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
+                    LayoutInflater layoutInflater = LayoutInflater.from(context);
+                    View view = layoutInflater.inflate(R.layout.movies, viewGroup, false);
+                    return view;
+                }
 
-            @Override
-            public void bindView(View view, Context context, Cursor cursor) {
-                TextView movieTitle = (TextView) view.findViewById(R.id.MovieName);
-                ImageView movieCover = (ImageView) view.findViewById(R.id.movieCover);
-                int returningImage = AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("cover")));
-                String movie1 = cursor.getString(cursor.getColumnIndex("title"));
-                movieTitle.setText(movie1);
-                movieCover.setImageResource(returningImage);
+                @Override
+                public void bindView(View view, Context context, Cursor cursor) {
+                    TextView movieTitle = (TextView) view.findViewById(R.id.MovieName);
+                    ImageView movieCover = (ImageView) view.findViewById(R.id.movieCover);
+                    int returningImage = AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("cover")));
+                    String movie1 = cursor.getString(cursor.getColumnIndex("title"));
+                    movieTitle.setText(movie1);
+                    movieCover.setImageResource(returningImage);
 
+                }
+            };
 
-            }
-        };
+            listView.setAdapter(adapter);
+
+        }else{
+            adapter.swapCursor(cursor);
+        }
 
         //Sets the adapter to the listView
 
@@ -148,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
                 cursor.moveToPosition(position);
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 intent.putExtra("title", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_TITLE)));
+                intent.putExtra("cover", AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("cover"))));
                 intent.putExtra("plot", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_PLOT)));
                 intent.putExtra("date", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_DATE)));
                 intent.putExtra("runtime", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_RUNTIME)));

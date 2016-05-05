@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -36,6 +37,7 @@ public class Main2Activity extends AppCompatActivity {
         TextView runtime = (TextView) findViewById(R.id.runtime);
         TextView topquote = (TextView) findViewById(R.id.quote);
         TextView gross = (TextView) findViewById(R.id.gross);
+        ImageView cover = (ImageView) findViewById(R.id.movieCover);
 
         //Creates the intent and the getter for the intent to pull out the information from the previous activity view the key/value pair
 
@@ -48,11 +50,13 @@ public class Main2Activity extends AppCompatActivity {
         String mRunTime = intent.getStringExtra("runtime");
         String mTopQuote = intent.getStringExtra("topquote");
         String mGross = intent.getStringExtra("gross");
+        int mCover = intent.getIntExtra("cover", 0);
 
         //Sets the text from the key/value pair the the textView
 
         title.setText(mTitle);
         title.setTypeface(font);
+        cover.setImageResource(mCover);
         plot.setText(mPlot);
         plot.setTypeface(font);
         date.setText(mDate);

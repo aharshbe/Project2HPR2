@@ -15,6 +15,8 @@ public class Movie {
     private String mQuote;
     private String mGross;
     private String mId;
+    private String mCover;
+
 
     //Getters and setters
 
@@ -73,4 +75,12 @@ public class Movie {
     public void setmGross(String mGross) {
         this.mGross = mGross;
     }
+    public String getmCover() {
+        return mCover;
+    }
+
+    public void setmCover(String mCover) {
+        this.mCover = mCover;
+    }
 }
+

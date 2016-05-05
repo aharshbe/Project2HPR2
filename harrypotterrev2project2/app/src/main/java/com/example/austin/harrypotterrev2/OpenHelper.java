@@ -18,7 +18,7 @@ import java.sql.Blob;
 
 public class OpenHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 25;
+    public static final int DATABASE_VERSION = 26;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
@@ -203,7 +203,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(
                 MOVIES_TABLE_NAME, // a. table
                 MOVIES_COLUMNS, // b. column names
-                COL_PLOT + " LIKE ? or " + COL_TITLE + " LIKE ? or " + COL_DATE + " LIKE ? or " + COL_RUNTIME + " LIKE ? or " + COL_TOPQUOTE + " LIKE ? or " + COL_GROSS + " LIKE ? ", // c. selections //or // or
+                COL_PLOT + " LIKE ? or " + COL_COVER + " LIKE ? or " + COL_TITLE + " LIKE ? or " + COL_DATE + " LIKE ? or " + COL_RUNTIME + " LIKE ? or " + COL_TOPQUOTE + " LIKE ? or " + COL_GROSS + " LIKE ? ", // c. selections //or // or
                 new String[]{"%" + query + "%", "%" + query + "%", "%" + query + "%", "%" + query + "%", "%" + query + "%", "%" + query + "%"}, // d. selections args
                 null, // e. group by
                 null, // f. having
