@@ -10,25 +10,30 @@
     tools:context="com.example.austin.harrypotterrev2.snapeDescription"
     android:background="@drawable/snapebackground">
 
-    <ImageView
-        android:id="@+id/textduble"
+    <TextView
+        android:id="@+id/snape"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/snapetext"
+        android:text="Snape"
+        android:textColor="#B8860B"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:textSize="99sp"
         android:onClick="clickingsnape" />
 
     <ImageView
         android:id="@+id/imagequotedumbl"
         android:layout_width="200dp"
         android:layout_height="150dp"
+        android:background="@drawable/snapewand"
+        android:layout_below="@+id/snape"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textduble"
-        android:layout_marginTop="43dp"
-        android:background="@drawable/snapewand" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/snapequote"
