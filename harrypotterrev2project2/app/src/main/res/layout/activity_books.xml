@@ -10,18 +10,29 @@
     tools:context="com.example.austin.harrypotterrev2.BooksActivity"
     android:background="@drawable/background6">
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/bookstitle"
-        android:background="@drawable/books"
+        android:text="Books"
+        android:textColor="#B8860B"
+        android:shadowColor="#000000"
+        android:shadowRadius="1.5"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:textSize="112sp"
         android:onClick="whenbooksclicked"/>
     <TextView
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:text=""
+        android:text="Harry Potter and the Philosopher's Stone"
         android:id="@+id/book1"
-        android:background="@drawable/hpvmovie1"
+        android:textColor="#B8860B"
+        android:shadowColor="#000000"
+        android:shadowRadius="1.5"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:textSize="35sp"
         android:layout_below="@+id/bookstitle"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

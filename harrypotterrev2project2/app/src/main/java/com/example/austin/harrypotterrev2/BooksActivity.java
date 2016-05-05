@@ -1,9 +1,11 @@
 package com.example.austin.harrypotterrev2;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class BooksActivity extends AppCompatActivity {
 
@@ -11,6 +13,14 @@ public class BooksActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_books);
+
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+        TextView title = (TextView) findViewById(R.id.bookstitle);
+        TextView book1 = (TextView) findViewById(R.id.book1);
+        book1.setTypeface(font);
+        title.setTypeface(font);
+
+
     }
 
     public void whenbooksclicked(View view) {
