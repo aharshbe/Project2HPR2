@@ -29,7 +29,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".easteregg"></activity>
+        <activity android:name=".easteregg" />
+        <activity android:name=".BooksActivity" />
+        <activity android:name=".bookDescription" />
+        <activity android:name=".bookDescription2" />
+        <activity android:name=".bookDescription3"></activity>
     </application>
 
 </manifest>

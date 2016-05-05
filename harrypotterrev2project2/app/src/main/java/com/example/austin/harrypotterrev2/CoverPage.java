@@ -45,6 +45,11 @@ public class CoverPage extends AppCompatActivity {
 
     }
 
+    public void whenClickedBooks(View view) {
+        Intent intent = new Intent(CoverPage.this, BooksActivity.class);
+        startActivity(intent);
+    }
+
     //Creates an OnClick event for intent on the books textView
 
 //    public void whenClickedBooks(View view) {
