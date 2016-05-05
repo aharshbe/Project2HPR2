@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class CoverPage extends AppCompatActivity {
 
@@ -17,4 +18,34 @@ public class CoverPage extends AppCompatActivity {
         Intent intent = new Intent(CoverPage.this, MainActivity.class);
         startActivity(intent);
     }
-}
+
+    public void whenHPClicked(View view) {
+            Toast.makeText(getApplicationContext(), "You found the easteregg!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CoverPage.this, easteregg.class);
+            startActivity(intent);
+
+        }
+    //Creates an OnClick event for intent on the movies textView
+
+
+    public void whenClickedMovies(View view) {
+        Intent intent = new Intent(CoverPage.this, MainActivity.class);
+        startActivity(intent);
+
+    }
+
+    //Creates an OnClick event for intent on the books textView
+
+//    public void whenClickedBooks(View view) {
+//        Intent intent = new Intent(CoverPage.this, BooksActivity.class);
+//        startActivity(intent);
+//    }
+//
+//    //Creates an OnClick event for intent on the quotes textView
+//
+//    public void whenClickedQuotes(View view) {
+//        Intent intent = new Intent(CoverPage.this, QuotesActivity.class);
+//        startActivity(intent);
+//    }
+    }
+
