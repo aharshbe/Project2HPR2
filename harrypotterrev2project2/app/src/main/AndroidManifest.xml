@@ -27,7 +27,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-
             </intent-filter>
         </activity>
         <activity android:name=".easteregg" />
@@ -38,7 +37,8 @@
         <activity android:name=".QuotesActivity" />
         <activity android:name=".quoteDescription" />
         <activity android:name=".dobbyDescription" />
-        <activity android:name=".snapeDescription"></activity>
+        <activity android:name=".snapeDescription" />
+        <activity android:name=".tryingSound"></activity>
     </application>
 
 </manifest>

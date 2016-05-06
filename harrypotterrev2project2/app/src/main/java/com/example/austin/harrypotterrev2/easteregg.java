@@ -34,6 +34,11 @@ public class easteregg extends AppCompatActivity {
     public static String hello() {
         return "why";
     }
+
+    public void clicksound234(View view) {
+        Intent intent = new Intent(easteregg.this, tryingSound.class);
+        startActivity(intent);
+    }
 }
 
 
