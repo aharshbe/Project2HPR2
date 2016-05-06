@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Region;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -115,20 +116,31 @@ public class MainActivity extends AppCompatActivity {
                     return view;
                 }
 
+
                 @Override
                 public void bindView(View view, Context context, Cursor cursor) {
                     Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
                     TextView movieTitle = (TextView) view.findViewById(R.id.MovieName);
                     movieTitle.setTypeface(font);
                     ImageView movieCover = (ImageView) view.findViewById(R.id.movieCover);
-                    Button playButton = (Button) view.findViewById(R.id.playsound2);
+                    Button playButton = (Button) view.findViewById(R.id.playsound);
                     int returningImage = AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("cover")));
                     int returningSound = AddingSound.getResource(cursor.getString(cursor.getColumnIndex("sound")));
                     String movie1 = cursor.getString(cursor.getColumnIndex("title"));
                     movieTitle.setText(movie1);
                     movieCover.setImageResource(returningImage);
-                   // playButton.se(returningSound);
+                    playButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
 
+                            String sound = helper.getSoundByID(id);
+                            int soundPlay = returningSound(sound);
+
+                            AddingSound.playSoundFunction(MainActivity.this, soundPlay);
+
+
+                        }
+                    });
 
                 }
             };

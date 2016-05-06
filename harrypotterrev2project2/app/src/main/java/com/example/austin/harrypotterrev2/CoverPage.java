@@ -64,6 +64,7 @@ public class CoverPage extends AppCompatActivity {
     }
 
 
+
     //Creates an OnClick event for intent on the books textView
 
 //    public void whenClickedBooks(View view) {

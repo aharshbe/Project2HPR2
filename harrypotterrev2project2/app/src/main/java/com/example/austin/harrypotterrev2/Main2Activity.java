@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,10 +22,30 @@ import java.util.List;
 
 public class Main2Activity extends AppCompatActivity {
 
+    Context context = this;
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.description);
+
+        mp = MediaPlayer.create(context, R.raw.ilym);
+        final Button b = (Button) findViewById(R.id.playsound);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
+                        mp = MediaPlayer.create(context, R.raw.ilym);
+                    } mp.start();
+                } catch(Exception e) { e.printStackTrace(); }
+            }
+        });
+
+
 
         //For custom font
 
@@ -39,7 +60,7 @@ public class Main2Activity extends AppCompatActivity {
         TextView topquote = (TextView) findViewById(R.id.quote);
         TextView gross = (TextView) findViewById(R.id.gross);
         ImageView cover = (ImageView) findViewById(R.id.movieCover);
-        Button playSound = (Button) findViewById(R.id.playsound);
+
 
         //Creates the intent and the getter for the intent to pull out the information from the previous activity view the key/value pair
 
@@ -69,12 +90,14 @@ public class Main2Activity extends AppCompatActivity {
         gross.setText(mGross);
         gross.setTypeface(font);
 
-
-
-
     }
 
+
 }
+
+
+
+
 
 
 

@@ -1,5 +1,8 @@
 package com.example.austin.harrypotterrev2;
 
+import android.content.Context;
+import android.media.MediaPlayer;
+
 /**
  * Created by austin on 5/6/16.
  */
@@ -14,4 +17,11 @@ public class AddingSound {
         }
 
     }
+
+    public static void playSoundFunction(Context context, int soundID){
+        MediaPlayer mp = MediaPlayer.create(context, soundID);
+        mp.start();
+    }
+
+
 }

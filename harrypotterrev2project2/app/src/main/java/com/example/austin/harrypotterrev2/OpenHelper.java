@@ -18,7 +18,7 @@ import java.sql.Blob;
 
 public class OpenHelper extends SQLiteOpenHelper {
     // Define the database name and version
-    public static final int DATABASE_VERSION = 29;
+    public static final int DATABASE_VERSION = 30;
     public static final String DATABASE_NAME = "movies.db";
 
     //Creating variables for each of the columns
