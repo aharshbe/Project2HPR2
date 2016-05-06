@@ -15,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
            // movieToAdd.setmId(cursor.getString(cursor.getColumnIndex("id")));
             movieToAdd.setmTitle(cursor.getString(cursor.getColumnIndex("title")));
+            movieToAdd.setmSound(cursor.getString(cursor.getColumnIndex("sound")));
             movieToAdd.setmPlot(cursor.getString(cursor.getColumnIndex("plot")));
             movieToAdd.setmDate(cursor.getString(cursor.getColumnIndex("date")));
             movieToAdd.setmRuntime(cursor.getString(cursor.getColumnIndex("runtime")));
@@ -119,10 +121,14 @@ public class MainActivity extends AppCompatActivity {
                     TextView movieTitle = (TextView) view.findViewById(R.id.MovieName);
                     movieTitle.setTypeface(font);
                     ImageView movieCover = (ImageView) view.findViewById(R.id.movieCover);
+                    Button playButton = (Button) view.findViewById(R.id.playsound2);
                     int returningImage = AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("cover")));
+                    int returningSound = AddingSound.getResource(cursor.getString(cursor.getColumnIndex("sound")));
                     String movie1 = cursor.getString(cursor.getColumnIndex("title"));
                     movieTitle.setText(movie1);
                     movieCover.setImageResource(returningImage);
+                   // playButton.se(returningSound);
+
 
                 }
             };
@@ -159,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 intent.putExtra("title", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_TITLE)));
                 intent.putExtra("cover", AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("cover"))));
+                intent.putExtra("sound", AddingSound.getResource(cursor.getString(cursor.getColumnIndex("sound"))));
                 intent.putExtra("plot", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_PLOT)));
                 intent.putExtra("date", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_DATE)));
                 intent.putExtra("runtime", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_RUNTIME)));
@@ -179,7 +186,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
 }
 

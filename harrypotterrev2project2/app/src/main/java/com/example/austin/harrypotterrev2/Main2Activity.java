@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
@@ -38,6 +39,7 @@ public class Main2Activity extends AppCompatActivity {
         TextView topquote = (TextView) findViewById(R.id.quote);
         TextView gross = (TextView) findViewById(R.id.gross);
         ImageView cover = (ImageView) findViewById(R.id.movieCover);
+        Button playSound = (Button) findViewById(R.id.playsound);
 
         //Creates the intent and the getter for the intent to pull out the information from the previous activity view the key/value pair
 

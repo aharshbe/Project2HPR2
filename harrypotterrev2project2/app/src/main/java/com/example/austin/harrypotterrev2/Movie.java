@@ -16,7 +16,7 @@ public class Movie {
     private String mGross;
     private String mId;
     private String mCover;
-
+    private String mSound;
 
     //Getters and setters
 
@@ -82,5 +82,15 @@ public class Movie {
     public void setmCover(String mCover) {
         this.mCover = mCover;
     }
+
+    public String getmSound() {
+        return mSound;
+    }
+
+    public void setmSound(String mSound) {
+        this.mSound = mSound;
+    }
+
 }
+
 

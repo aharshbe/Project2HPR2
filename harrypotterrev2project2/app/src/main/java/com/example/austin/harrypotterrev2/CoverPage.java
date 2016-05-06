@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,6 +62,7 @@ public class CoverPage extends AppCompatActivity {
         Intent intent = new Intent(CoverPage.this, QuotesActivity.class);
         startActivity(intent);
     }
+
 
     //Creates an OnClick event for intent on the books textView
 

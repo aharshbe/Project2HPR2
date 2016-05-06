@@ -26,6 +26,17 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:text="play sound"
+        android:id="@+id/playsound2"
+        android:textSize="10sp"
+        android:onClick="clickPlay"
+        android:layout_below="@+id/MovieName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
