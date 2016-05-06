@@ -25,6 +25,7 @@ public class OpenHelper extends SQLiteOpenHelper {
     public static final String MOVIES_TABLE_NAME = "moviesDescription";
     public static final String COL_ID = "_id";
     public static final String COL_COVER = "cover" ;
+    public static final String COL_SOUND = "sound" ;
     public static final String COL_PLOT = "plot";
     public static final String COL_DATE = "date";
     public static final String COL_RUNTIME = "runtime";
@@ -34,7 +35,7 @@ public class OpenHelper extends SQLiteOpenHelper {
 
 
     //Creating an array of the different columns
-    public static final String[] MOVIES_COLUMNS = {COL_ID, COL_TITLE, COL_COVER, COL_PLOT, COL_DATE, COL_RUNTIME, COL_TOPQUOTE, COL_GROSS};
+    public static final String[] MOVIES_COLUMNS = {COL_ID, COL_TITLE, COL_SOUND, COL_COVER, COL_PLOT, COL_DATE, COL_RUNTIME, COL_TOPQUOTE, COL_GROSS};
 
 
     //Adds create table information for each of the colums
@@ -44,6 +45,7 @@ public class OpenHelper extends SQLiteOpenHelper {
                     COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COL_TITLE + " TEXT, " +
                     COL_COVER + " TEXT, " +
+                    COL_SOUND + " TEXT, " +
                     COL_DATE + " TEXT, " +
                     COL_GROSS + " TEXT, " +
                     COL_TOPQUOTE + " TEXT, " +
@@ -179,7 +181,7 @@ public class OpenHelper extends SQLiteOpenHelper {
 
         Cursor cursor = db.query(
                 MOVIES_TABLE_NAME, // a. table
-                new String[]{COL_ID, COL_TITLE, COL_COVER, COL_PLOT, COL_DATE, COL_RUNTIME, COL_TOPQUOTE, COL_GROSS}, // b. column names
+                new String[]{COL_ID, COL_TITLE, COL_COVER, COL_SOUND, COL_PLOT, COL_DATE, COL_RUNTIME, COL_TOPQUOTE, COL_GROSS}, // b. column names
                 null, // c. selections //or // or
                 null, // d. selections args
                 null, // e. group by
@@ -203,7 +205,7 @@ public class OpenHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(
                 MOVIES_TABLE_NAME, // a. table
                 MOVIES_COLUMNS, // b. column names
-                COL_PLOT + " LIKE ? or " + COL_COVER + " LIKE ? or " + COL_TITLE + " LIKE ? or " + COL_DATE + " LIKE ? or " + COL_RUNTIME + " LIKE ? or " + COL_TOPQUOTE + " LIKE ? or " + COL_GROSS + " LIKE ? ", // c. selections //or // or
+                COL_PLOT + " LIKE ? or " + COL_COVER + " LIKE ? or " + COL_SOUND + " LIKE ? or " + COL_TITLE + " LIKE ? or " + COL_DATE + " LIKE ? or " + COL_RUNTIME + " LIKE ? or " + COL_TOPQUOTE + " LIKE ? or " + COL_GROSS + " LIKE ? ", // c. selections //or // or
                 new String[]{"%" + query + "%", "%" + query + "%", "%" + query + "%", "%" + query + "%", "%" + query + "%", "%" + query + "%"}, // d. selections args
                 null, // e. group by
                 null, // f. having
