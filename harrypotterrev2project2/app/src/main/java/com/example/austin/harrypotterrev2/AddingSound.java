@@ -7,7 +7,7 @@ public class AddingSound {
     public static int getDrawable(String sound) {
         switch (sound) {
             case "sound1":
-                return R.drawable.ilym;
+                return R.raw.ilym;
             default:
                 return 0;
 
