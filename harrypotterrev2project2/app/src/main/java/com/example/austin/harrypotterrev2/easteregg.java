@@ -11,6 +11,9 @@ import android.view.View;
 
 import java.io.InputStream;
 
+//Just a random class I created for a fun little easteregg, originally it was suppose to also have a moving gif and a sound,
+//Sadly I wasn't able to implement either of those two, though I did try in my various branch :P
+
 public class easteregg extends AppCompatActivity {
 
     @Override

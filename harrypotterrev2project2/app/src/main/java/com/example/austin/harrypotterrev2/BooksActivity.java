@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+//Contains the logic for the books actiivty, the start page that lists all the different books, where the images go for  each book and sets the text
+
 public class BooksActivity extends AppCompatActivity {
 
     @Override

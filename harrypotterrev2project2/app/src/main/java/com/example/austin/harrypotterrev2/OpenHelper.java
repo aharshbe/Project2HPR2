@@ -14,7 +14,7 @@ import java.sql.Blob;
  * Created by austin on 5/2/16.
  */
 
-//Extends the open helper class
+//Extends the open helper class, creates my database and seeds it
 
 public class OpenHelper extends SQLiteOpenHelper {
     // Define the database name and version

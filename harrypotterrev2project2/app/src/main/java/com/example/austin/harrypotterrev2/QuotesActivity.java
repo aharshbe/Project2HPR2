@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+//Contains the logic for the quotes actiivty, the start page that lists all
+// the different quotes and which characted said them or rather which characters you can choose from
+
 public class QuotesActivity extends AppCompatActivity {
 
     @Override

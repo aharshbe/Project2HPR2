@@ -18,6 +18,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+//Activity two contains most of the tie in on the listView for the movies activity
+
 public class Main2Activity extends AppCompatActivity {
 
     @Override

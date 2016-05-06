@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+//Is the second book descritpion that intents and gives information about the second book when clicked
+
 public class bookDescription2 extends AppCompatActivity {
 
     @Override

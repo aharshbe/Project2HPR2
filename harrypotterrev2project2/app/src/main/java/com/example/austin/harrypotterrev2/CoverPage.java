@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//Contains the logic for the coverpage actiivty, the start page that lists all
+// the different categories being movies, books and quotes, where the images go for  each category and sets the text for each of those
+
 public class CoverPage extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

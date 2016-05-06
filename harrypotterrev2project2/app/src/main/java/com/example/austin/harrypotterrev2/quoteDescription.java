@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+//Description page for when Dumbledore is selected in the quotes activity
+
 public class quoteDescription extends AppCompatActivity {
 
     @Override

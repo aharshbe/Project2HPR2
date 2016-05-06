@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+//Is the third book descritpion that intents and gives information about the third book when clicked
+
 public class bookDescription3 extends AppCompatActivity {
 
     @Override
