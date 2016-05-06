@@ -16,7 +16,8 @@ public class easteregg extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_easteregg);}
+        setContentView(R.layout.activity_easteregg);
+    }
 
 
     //Creates intent for user so they can go back to main screen
@@ -27,7 +28,7 @@ public class easteregg extends AppCompatActivity {
     }
 
     //Just created this to show that I know what I'm doing for the test cases
-    public static String hello(){
+    public static String hello() {
         return "why";
     }
 }

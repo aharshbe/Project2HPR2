@@ -3,97 +3,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.austin.harrypotterrev2.CoverPage"
-    android:background="@drawable/backgroundhdhogwarts">
+    android:background="@drawable/backgroundhdhogwarts"
+    tools:context="com.example.austin.harrypotterrev2.CoverPage">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="whenHPClicked"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
         android:text="HarryPotter"
         android:textColor="#B8860B"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1.5"
-        android:textSize="112sp"
-        android:onClick="whenHPClicked"/>
+        android:textSize="112sp" />
+
     <TextView
+        android:id="@+id/mvoies"
         android:layout_width="150dp"
         android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"
+        android:onClick="whenClickedMovies"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
         android:text="Movies"
         android:textColor="#B8860B"
-        android:shadowColor="#000000"
-        android:shadowRadius="1.5"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:textSize="50sp"
-        android:id="@+id/mvoies"
-        android:layout_below="@+id/title"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp"
-        android:onClick="whenClickedMovies"/>
+        android:textSize="50sp" />
+
     <ImageView
+        android:id="@+id/movie1"
         android:layout_width="150dp"
         android:layout_height="120dp"
-        android:id="@+id/movie1"
-        android:background="@drawable/moviescollectionhd"
-        android:layout_alignTop="@+id/mvoies"
         android:layout_alignLeft="@+id/book1"
         android:layout_alignStart="@+id/book1"
+        android:layout_alignTop="@+id/mvoies"
         android:layout_marginRight="5dp"
-        android:onClick="whenClickedMovies"/>
+        android:background="@drawable/moviescollectionhd"
+        android:onClick="whenClickedMovies" />
+
     <TextView
+        android:id="@+id/books"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:text="Books"
-        android:id="@+id/books"
-        android:textColor="#B8860B"
-        android:shadowColor="#000000"
-        android:shadowRadius="1.5"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:textSize="50sp"
-        android:layout_below="@+id/movie1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="whenClickedBooks" />
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="120dp"
-        android:id="@+id/book1"
-        android:background="@drawable/bookshd"
         android:layout_below="@+id/movie1"
-        android:layout_alignRight="@+id/quotes1"
-        android:layout_alignEnd="@+id/quotes1"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:onClick="whenClickedBooks"/>
-    <TextView
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="Quotes"
-        android:id="@+id/quotes"
-        android:textColor="#B8860B"
+        android:onClick="whenClickedBooks"
         android:shadowColor="#000000"
-        android:shadowRadius="1.5"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:textSize="50sp"
-        android:onClick="whenClickedQuotes"
-        android:layout_below="@+id/book1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:shadowRadius="1.5"
+        android:text="Books"
+        android:textColor="#B8860B"
+        android:textSize="50sp" />
+
     <ImageView
+        android:id="@+id/book1"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_alignEnd="@+id/quotes1"
+        android:layout_alignRight="@+id/quotes1"
+        android:layout_below="@+id/movie1"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bookshd"
+        android:onClick="whenClickedBooks" />
+
+    <TextView
+        android:id="@+id/quotes"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/book1"
+        android:onClick="whenClickedQuotes"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="Quotes"
+        android:textColor="#B8860B"
+        android:textSize="50sp" />
+
+    <ImageView
+        android:id="@+id/quotes1"
         android:layout_width="170dp"
         android:layout_height="120dp"
-        android:id="@+id/quotes1"
-        android:background="@drawable/quoteshdd"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
-        android:layout_alignTop="@+id/quotes"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="whenClickedQuotes"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/quotes"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/quoteshdd"
+        android:onClick="whenClickedQuotes" />
 </RelativeLayout>

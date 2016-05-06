@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2">
+    android:background="@drawable/background2"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/MovieName"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/MovieName"
-        android:textColor="#B8860B"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:shadowColor="#000000"
-        android:shadowRadius="1.5"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:textSize="40sp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:shadowRadius="1.5"
+        android:text="New Text"
+        android:textColor="#B8860B"
+        android:textSize="40sp" />
 
     <ImageView
+        android:id="@+id/movieCover"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/movieCover"
-        android:layout_alignTop="@+id/MovieName"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
+        android:layout_alignTop="@+id/MovieName" />
 
 
 </RelativeLayout>

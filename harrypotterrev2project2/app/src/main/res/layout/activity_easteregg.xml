@@ -3,23 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.austin.harrypotterrev2.easteregg"
-    android:background="#000000">
+    android:background="#000000"
+    tools:context="com.example.austin.harrypotterrev2.easteregg">
 
 
     <Button
+        android:id="@+id/backtomainbutton"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Done with Egg ;-)"
-        android:id="@+id/backtomainbutton"
         android:layout_gravity="right"
-        android:onClick="backtocategories"/>
+        android:onClick="backtocategories"
+        android:text="Done with Egg ;-)" />
 
     <ImageView
+        android:id="@+id/easteregg"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:id="@+id/easteregg"
-        android:background="@drawable/wicked"/>
+        android:background="@drawable/wicked" />
 
 </RelativeLayout>

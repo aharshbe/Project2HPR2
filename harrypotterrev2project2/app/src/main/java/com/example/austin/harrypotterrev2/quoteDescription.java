@@ -19,8 +19,8 @@ public class quoteDescription extends AppCompatActivity {
         dumble.setTypeface(font);
 
 
-
     }
+
     public void clickingdumbledore(View view) {
         Intent intent = new Intent(quoteDescription.this, QuotesActivity.class);
         startActivity(intent);

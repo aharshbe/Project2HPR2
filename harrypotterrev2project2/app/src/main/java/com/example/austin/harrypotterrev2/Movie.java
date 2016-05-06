@@ -75,6 +75,7 @@ public class Movie {
     public void setmGross(String mGross) {
         this.mGross = mGross;
     }
+
     public String getmCover() {
         return mCover;
     }

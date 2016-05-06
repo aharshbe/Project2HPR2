@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.austin.harrypotterrev2.MainActivity"
-    android:background="@drawable/backgroundhdhogwarts">
+    android:background="@drawable/backgroundhdhogwarts"
+    tools:context="com.example.austin.harrypotterrev2.MainActivity">
 
     <ListView
         android:id="@+id/listView"
@@ -13,45 +13,45 @@
         android:layout_gravity="center" />
 
     <!--<ImageView-->
-        <!--android:layout_width="60dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:id="@+id/movie1"-->
-        <!--android:background="@drawable/hpv1sor"-->
-        <!--android:layout_alignTop="@+id/listView"-->
-        <!--android:layout_toRightOf="@+id/listView"-->
-        <!--android:layout_toEndOf="@+id/listView" />-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/movie1"-->
+    <!--android:background="@drawable/hpv1sor"-->
+    <!--android:layout_alignTop="@+id/listView"-->
+    <!--android:layout_toRightOf="@+id/listView"-->
+    <!--android:layout_toEndOf="@+id/listView" />-->
     <!--<ImageView-->
-        <!--android:layout_width="60dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:id="@+id/movie2"-->
-        <!--android:background="@drawable/hpv22"-->
-        <!--android:layout_below="@+id/movie1"-->
-        <!--android:layout_alignLeft="@+id/movie1"-->
-        <!--android:layout_alignStart="@+id/movie1" />-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/movie2"-->
+    <!--android:background="@drawable/hpv22"-->
+    <!--android:layout_below="@+id/movie1"-->
+    <!--android:layout_alignLeft="@+id/movie1"-->
+    <!--android:layout_alignStart="@+id/movie1" />-->
     <!--<ImageView-->
-        <!--android:layout_width="60dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:id="@+id/movie3"-->
-        <!--android:background="@drawable/hpmv3movie"-->
-        <!--android:layout_below="@+id/movie2"-->
-        <!--android:layout_alignLeft="@+id/movie2"-->
-        <!--android:layout_alignStart="@+id/movie2" />-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/movie3"-->
+    <!--android:background="@drawable/hpmv3movie"-->
+    <!--android:layout_below="@+id/movie2"-->
+    <!--android:layout_alignLeft="@+id/movie2"-->
+    <!--android:layout_alignStart="@+id/movie2" />-->
     <!--<ImageView-->
-        <!--android:layout_width="60dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:id="@+id/movie4"-->
-        <!--android:background="@drawable/hpvmv4"-->
-        <!--android:layout_below="@+id/movie3"-->
-        <!--android:layout_toRightOf="@+id/listView"-->
-        <!--android:layout_toEndOf="@+id/listView" />-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/movie4"-->
+    <!--android:background="@drawable/hpvmv4"-->
+    <!--android:layout_below="@+id/movie3"-->
+    <!--android:layout_toRightOf="@+id/listView"-->
+    <!--android:layout_toEndOf="@+id/listView" />-->
     <!--<ImageView-->
-        <!--android:layout_width="60dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:id="@+id/movie5"-->
-        <!--android:background="@drawable/hpvmvc5"-->
-        <!--android:layout_below="@+id/movie4"-->
-        <!--android:layout_toRightOf="@+id/listView"-->
-        <!--android:layout_toEndOf="@+id/listView" />-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/movie5"-->
+    <!--android:background="@drawable/hpvmvc5"-->
+    <!--android:layout_below="@+id/movie4"-->
+    <!--android:layout_toRightOf="@+id/listView"-->
+    <!--android:layout_toEndOf="@+id/listView" />-->
     <!--<ImageView-->
     <!--android:layout_width="60dp"-->
     <!--android:layout_height="50dp"-->
@@ -61,19 +61,19 @@
     <!--android:layout_toRightOf="@+id/listView"-->
     <!--android:layout_toEndOf="@+id/listView" />-->
     <!--<ImageView-->
-        <!--android:layout_width="60dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:id="@+id/movie7"-->
-        <!--android:background="@drawable/hpmv7"-->
-        <!--android:layout_below="@+id/movie6"-->
-        <!--android:layout_toRightOf="@+id/listView"-->
-        <!--android:layout_toEndOf="@+id/listView" />-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/movie7"-->
+    <!--android:background="@drawable/hpmv7"-->
+    <!--android:layout_below="@+id/movie6"-->
+    <!--android:layout_toRightOf="@+id/listView"-->
+    <!--android:layout_toEndOf="@+id/listView" />-->
     <!--<ImageView-->
-        <!--android:layout_width="60dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:id="@+id/movie8"-->
-        <!--android:background="@drawable/hpmv8"-->
-        <!--android:layout_below="@+id/movie7"-->
-        <!--android:layout_toRightOf="@+id/listView"-->
-        <!--android:layout_toEndOf="@+id/listView" />-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/movie8"-->
+    <!--android:background="@drawable/hpmv8"-->
+    <!--android:layout_below="@+id/movie7"-->
+    <!--android:layout_toRightOf="@+id/listView"-->
+    <!--android:layout_toEndOf="@+id/listView" />-->
 </RelativeLayout>

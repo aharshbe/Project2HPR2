@@ -18,6 +18,7 @@ public class dobbyDescription extends AppCompatActivity {
         TextView dobby = (TextView) findViewById(R.id.dobby);
         dobby.setTypeface(font);
     }
+
     public void clickingdobby(View view) {
         Intent intent = new Intent(dobbyDescription.this, QuotesActivity.class);
         startActivity(intent);

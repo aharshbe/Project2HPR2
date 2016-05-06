@@ -3,100 +3,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundhdhogwarts"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.austin.harrypotterrev2.QuotesActivity"
-    android:background="@drawable/backgroundhdhogwarts">
+    tools:context="com.example.austin.harrypotterrev2.QuotesActivity">
 
     <TextView
+        android:id="@+id/quotetitle"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:id="@+id/quotetitle"
+        android:onClick="clickingquotes"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
         android:text="Quotes"
         android:textColor="#B8860B"
+        android:textSize="112sp" />
+
+    <TextView
+        android:id="@+id/quote1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/quotetitle"
+        android:onClick="clickingdumbledore"
         android:shadowColor="#000000"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:textSize="112sp"
-        android:onClick="clickingquotes"/>
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:id="@+id/quote1"
         android:text="Dumbledore"
         android:textColor="#B8860B"
-        android:shadowColor="#000000"
-        android:shadowRadius="1.5"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:textSize="50sp"
-        android:layout_below="@+id/quotetitle"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="clickingdumbledore"/>
+        android:textSize="50sp" />
+
     <ImageView
+        android:id="@+id/char1"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:id="@+id/char1"
-        android:background="@drawable/dumbledoretwo"
-        android:layout_below="@+id/quotetitle"
-        android:layout_alignRight="@+id/quotetitle"
         android:layout_alignEnd="@+id/quotetitle"
-        android:onClick="clickingdumbledore"/>
+        android:layout_alignRight="@+id/quotetitle"
+        android:layout_below="@+id/quotetitle"
+        android:background="@drawable/dumbledoretwo"
+        android:onClick="clickingdumbledore" />
+
     <TextView
+        android:id="@+id/quote2"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:text="Snape"
-        android:textColor="#B8860B"
-        android:shadowColor="#000000"
-        android:shadowRadius="1.5"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:textSize="50sp"
-        android:id="@+id/quote2"
-        android:layout_below="@+id/char1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="clickingsnape"/>
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="110dp"
-        android:id="@+id/char2"
-        android:background="@drawable/snapeimage"
         android:layout_below="@+id/char1"
-        android:layout_toRightOf="@+id/quote2"
-        android:layout_toEndOf="@+id/quote2"
-        android:layout_marginTop="5dp"
-        android:onClick="clickingsnape"/>
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:text="Dobby"
-        android:textColor="#B8860B"
+        android:onClick="clickingsnape"
         android:shadowColor="#000000"
-        android:shadowRadius="1.5"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:textSize="50sp"
+        android:shadowRadius="1.5"
+        android:text="Snape"
+        android:textColor="#B8860B"
+        android:textSize="50sp" />
+
+    <ImageView
+        android:id="@+id/char2"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/char1"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/quote2"
+        android:layout_toRightOf="@+id/quote2"
+        android:background="@drawable/snapeimage"
+        android:onClick="clickingsnape" />
+
+    <TextView
         android:id="@+id/quote3"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="34dp"
-        android:onClick="goingtodobby"/>
+        android:onClick="goingtodobby"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="Dobby"
+        android:textColor="#B8860B"
+        android:textSize="50sp" />
+
     <ImageView
+        android:id="@+id/char3"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:id="@+id/char3"
-        android:background="@drawable/dobby"
-        android:layout_alignTop="@+id/quote3"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/quote3"
         android:layout_marginTop="5dp"
-        android:onClick="goingtodobby"/>
+        android:background="@drawable/dobby"
+        android:onClick="goingtodobby" />
 
 
 </RelativeLayout>

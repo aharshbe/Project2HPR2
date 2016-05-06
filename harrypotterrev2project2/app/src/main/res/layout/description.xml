@@ -1,113 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2">
+    android:background="@drawable/background2"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="6"
         android:text="TITLE"
-        android:id="@+id/title"
-        android:textColor="#B8860B"
-        android:shadowColor="#000000"
-        android:shadowRadius="6"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:textSize="43sp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="PLOT"
-        android:id="@+id/plot"
-        android:textSize="19sp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/title"
-        android:textColor="#228B22"
-        android:shadowColor="#000000"
-        android:shadowRadius="6"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#B8860B"
+        android:textSize="43sp" />
+
+    <TextView
+        android:id="@+id/plot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:shadowColor="#000000"
-        android:shadowRadius="1.5"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:textSize="24sp"
-        android:text="DATE"
+        android:shadowRadius="6"
+        android:text="PLOT"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#228B22"
+        android:textSize="19sp" />
+
+    <TextView
         android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="184dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#B8860B"
+        android:layout_marginBottom="184dp"
         android:shadowColor="#000000"
-        android:shadowRadius="1.5"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:textSize="24sp"
-        android:text="RUNTIME"
+        android:shadowRadius="1.5"
+        android:text="DATE"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/runtime"
-        android:layout_marginTop="30dp"
-        android:layout_alignTop="@+id/date"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="QUOTE"
-        android:id="@+id/quote"
-        android:fontFamily="cursive"
-        android:textStyle="bold"
-        android:textColor="#FF4500"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/date"
+        android:layout_marginTop="30dp"
         android:shadowColor="#000000"
-        android:shadowRadius="6"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:textSize="23sp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/runtime"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:shadowRadius="1.5"
+        android:text="RUNTIME"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#B8860B"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/runtime"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
         android:shadowColor="#000000"
-        android:shadowRadius="1.5"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:textSize="24sp"
-        android:text="GROSS"
+        android:shadowRadius="6"
+        android:text="QUOTE"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FF4500"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/gross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="GROSS"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
+        android:textSize="24sp" />
 
     <ImageView
+        android:id="@+id/movieCover"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/movieCover"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentTop="true" />
 
 </RelativeLayout>

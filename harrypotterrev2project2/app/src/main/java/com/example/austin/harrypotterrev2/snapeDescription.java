@@ -20,6 +20,7 @@ public class snapeDescription extends AppCompatActivity {
 
 
     }
+
     public void clickingsnape(View view) {
         Intent intent = new Intent(snapeDescription.this, QuotesActivity.class);
         startActivity(intent);

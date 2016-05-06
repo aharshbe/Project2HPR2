@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             Movie movieToAdd = new Movie();
 
-           // movieToAdd.setmId(cursor.getString(cursor.getColumnIndex("id")));
+            // movieToAdd.setmId(cursor.getString(cursor.getColumnIndex("id")));
             movieToAdd.setmTitle(cursor.getString(cursor.getColumnIndex("title")));
             movieToAdd.setmPlot(cursor.getString(cursor.getColumnIndex("plot")));
             movieToAdd.setmDate(cursor.getString(cursor.getColumnIndex("date")));
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Creates the adapter to utilize the cursor
 
-        if (adapter == null){
+        if (adapter == null) {
 
             adapter = new CursorAdapter(this, cursor, 0) {
 
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
             listView.setAdapter(adapter);
 
-        }else{
+        } else {
             adapter.swapCursor(cursor);
         }
 
@@ -175,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
         //Handels the intent when the user places information into the searchView
 
         handleIntent(getIntent());
-
 
 
     }

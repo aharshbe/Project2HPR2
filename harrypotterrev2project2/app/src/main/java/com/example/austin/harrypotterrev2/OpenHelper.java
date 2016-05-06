@@ -24,7 +24,7 @@ public class OpenHelper extends SQLiteOpenHelper {
     //Creating variables for each of the columns
     public static final String MOVIES_TABLE_NAME = "moviesDescription";
     public static final String COL_ID = "_id";
-    public static final String COL_COVER = "cover" ;
+    public static final String COL_COVER = "cover";
     public static final String COL_PLOT = "plot";
     public static final String COL_DATE = "date";
     public static final String COL_RUNTIME = "runtime";

@@ -17,6 +17,7 @@ public class CoverPage extends AppCompatActivity {
         inflater.inflate(R.menu.toolbaricon, menu);
         return true;
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +39,11 @@ public class CoverPage extends AppCompatActivity {
     }
 
     public void whenHPClicked(View view) {
-            Toast.makeText(getApplicationContext(), "You found the easteregg!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(CoverPage.this, easteregg.class);
-            startActivity(intent);
+        Toast.makeText(getApplicationContext(), "You found the easteregg!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(CoverPage.this, easteregg.class);
+        startActivity(intent);
 
-        }
+    }
     //Creates an OnClick event for intent on the movies textView
 
 
@@ -75,5 +76,5 @@ public class CoverPage extends AppCompatActivity {
 //        Intent intent = new Intent(CoverPage.this, QuotesActivity.class);
 //        startActivity(intent);
 //    }
-    }
+}
 
