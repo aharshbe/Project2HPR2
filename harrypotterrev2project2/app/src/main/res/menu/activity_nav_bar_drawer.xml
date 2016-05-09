@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_movies"
-            android:icon="@drawable/iconhp"
-            android:title="Movies"
-            android:onClick="openMovies"/>
-        <item
-            android:id="@+id/nav_books"
-            android:icon="@drawable/iconhp"
-            android:title="Books"
-            android:onClick="openBooks"/>
-        <item
-            android:id="@+id/nav_quotes"
-            android:icon="@drawable/iconhp"
-            android:title="Quotes"
-            android:onClick="openQuotes"/>
+        <item android:title="Categories">
+            <item
+                android:id="@+id/nav_movies"
+                android:icon="@drawable/iconhp"
+                android:title="Movies"
+                android:onClick="openMovies"/>
+            <item
+                android:id="@+id/nav_books"
+                android:icon="@drawable/iconhp"
+                android:title="Books"
+                android:onClick="openBooks"/>
+            <item
+                android:id="@+id/nav_quotes"
+                android:icon="@drawable/iconhp"
+                android:title="Quotes"
+                android:onClick="openQuotes"/>
+        </item>
     </group>
 
-    <item android:title="Communicate">
+
+    <item android:title="Share">
         <menu>
             <item
                 android:id="@+id/nav_share"
@@ -29,6 +33,19 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
+        </menu>
+    </item>
+
+    <item android:title="Photos">
+        <menu>
+            <item
+                android:id="@+id/gallery"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Galley" />
+            <item
+                android:id="@+id/slideshow"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Slideshow" />
         </menu>
     </item>
 
