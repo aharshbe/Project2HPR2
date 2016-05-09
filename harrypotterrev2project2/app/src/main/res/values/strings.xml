@@ -3,9 +3,14 @@
     <string name="search_hint">Search the Harry Directory!</string>
     <string name="my_app_name">HP: The Index</string>
     <string name="title_activity_nav_bar">HP: The Index</string>
-
+    <string name="bb">Back button</string>
+    <string name="tryme">try me!</string>
+    <string name="listview">A list of all Harry Potter movies!</string>
+    <string name="sound">Click me to hear sound!</string>
+    <string name="fab">Click me to see a cataegories list</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
 
     <string name="action_settings">Settings</string>
 </resources>

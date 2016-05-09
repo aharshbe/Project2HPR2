@@ -18,7 +18,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:onClick="booksback2"
-        android:text="Back to books" />
+        android:text="Back to books"
+        android:contentDescription="@string/bb"/>
 
     <TextView
         android:id="@+id/description1"
