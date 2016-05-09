@@ -105,15 +105,22 @@ public class NavBar extends AppCompatActivity
     public void openMovies(MenuItem item) {
         Intent intent = new Intent(NavBar.this, MainActivity.class);
         startActivity(intent);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
     }
 
     public void openBooks(MenuItem item) {
         Intent intent = new Intent(NavBar.this, BooksActivity.class);
         startActivity(intent);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
     }
 
     public void openQuotes(MenuItem item) {
         Intent intent = new Intent(NavBar.this, QuotesActivity.class);
         startActivity(intent);
+        //closes the drawer after the option is selected from the menu
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
     }
 }
