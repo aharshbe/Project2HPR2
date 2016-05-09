@@ -64,6 +64,8 @@ public class NavBar extends AppCompatActivity
         return true;
     }
 
+    //Commented out because it no longer corolates to the settings three dot thing for the nav bar
+
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
 //        // Handle action bar item clicks here. The action bar will
@@ -107,6 +109,7 @@ public class NavBar extends AppCompatActivity
         startActivity(intent);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
     }
 
     public void openBooks(MenuItem item) {
