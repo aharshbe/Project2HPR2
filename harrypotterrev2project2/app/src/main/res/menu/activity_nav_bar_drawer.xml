@@ -41,6 +41,7 @@
             <item
                 android:id="@+id/gallery"
                 android:icon="@drawable/ic_menu_gallery"
+                android:onClick="openGallery"
                 android:title="Galley" />
             <item
                 android:id="@+id/slideshow"

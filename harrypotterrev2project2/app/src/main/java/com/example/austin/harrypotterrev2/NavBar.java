@@ -130,4 +130,9 @@ public class NavBar extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
+
+    public void openGallery(MenuItem item) {
+        Intent intent = new Intent(NavBar.this, ScrollingActivity.class);
+        startActivity(intent);
+    }
 }
