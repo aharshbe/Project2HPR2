@@ -109,4 +109,14 @@ public class NavBar extends AppCompatActivity
         Intent intent = new Intent(NavBar.this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void openBooks(MenuItem item) {
+        Intent intent = new Intent(NavBar.this, BooksActivity.class);
+        startActivity(intent);
+    }
+
+    public void openQuotes(MenuItem item) {
+        Intent intent = new Intent(NavBar.this, QuotesActivity.class);
+        startActivity(intent);
+    }
 }
