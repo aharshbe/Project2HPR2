@@ -38,7 +38,11 @@
         <activity android:name=".quoteDescription" />
         <activity android:name=".dobbyDescription" />
         <activity android:name=".snapeDescription" />
-        <activity android:name=".tryingSound"></activity>
+        <activity android:name=".tryingSound" />
+        <activity
+            android:name=".NavBar"
+            android:label="@string/title_activity_nav_bar"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

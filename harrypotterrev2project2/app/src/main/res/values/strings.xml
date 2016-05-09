@@ -2,4 +2,10 @@
     <string name="app_name">Harrypotterrev2</string>
     <string name="search_hint">Search the Harry Directory!</string>
     <string name="my_app_name">HP: The Index</string>
+    <string name="title_activity_nav_bar">NavBar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
