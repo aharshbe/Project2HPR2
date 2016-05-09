@@ -1,5 +1,6 @@
 package com.example.austin.harrypotterrev2;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -24,7 +25,7 @@ public class NavBar extends AppCompatActivity
         setContentView(R.layout.activity_nav_bar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+//        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
 //        TextView tv1 = (TextView) findViewById(R.id.tv1);
 //        TextView tv2 = (TextView) findViewById(R.id.tv2);
 //        tv1.setTypeface(font);
@@ -102,5 +103,10 @@ public class NavBar extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void openMovies(MenuItem item) {
+        Intent intent = new Intent(NavBar.this, MainActivity.class);
+        startActivity(intent);
     }
 }
