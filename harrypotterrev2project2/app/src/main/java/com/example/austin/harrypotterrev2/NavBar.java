@@ -109,7 +109,6 @@ public class NavBar extends AppCompatActivity
         startActivity(intent);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-
     }
 
     public void openBooks(MenuItem item) {
