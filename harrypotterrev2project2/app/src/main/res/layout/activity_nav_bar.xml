@@ -7,7 +7,34 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    android:background="@drawable/dobby">
+    android:background="@drawable/background1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Harry Potter Index!"
+        android:paddingTop="63dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/NavBarDescirption"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:textColor="#B8860B"
+        android:textSize="50sp"/>
+
+    <TextView
+        android:id="@+id/descriptionofNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(To see categories swipe from the right to the left)"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:paddingTop="475dp"
+        android:shadowRadius="1.5"
+        android:textColor="#B8860B"
+        android:textSize="35sp"/>
 
     <include
         layout="@layout/app_bar_nav_bar"

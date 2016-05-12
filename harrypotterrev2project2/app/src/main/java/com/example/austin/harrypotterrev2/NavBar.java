@@ -1,6 +1,7 @@
 package com.example.austin.harrypotterrev2;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
@@ -12,9 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class NavBar extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    TextView NavBarDescription, Descritptionofnav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,14 @@ public class NavBar extends AppCompatActivity
 //        TextView tv2 = (TextView) findViewById(R.id.tv2);
 //        tv1.setTypeface(font);
 //        tv2.setTypeface(font);
+
+        NavBarDescription = (TextView) findViewById(R.id.NavBarDescirption);
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+        NavBarDescription.setTypeface(font);
+        Descritptionofnav = (TextView) findViewById(R.id.descriptionofNav);
+        Descritptionofnav.setTypeface(font);
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
