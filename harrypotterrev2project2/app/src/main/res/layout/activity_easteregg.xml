@@ -25,6 +25,22 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+    <ImageView
+        android:id="@+id/harry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/g2"
+        android:layout_below="@+id/ron"
+        android:layout_toRightOf="@+id/ron"
+        android:layout_toEndOf="@+id/ron" />
+    <ImageView
+        android:id="@+id/ron"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/g4"
+        android:layout_below="@+id/moldy"
+        android:layout_toLeftOf="@+id/moldy"
+        android:layout_toStartOf="@+id/moldy" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -42,7 +58,8 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="50dp"
         android:layout_height="40dp"
-        android:text="'?'"
+        android:text="Vold"
+        android:textSize="10sp"
         android:id="@+id/spinner"
         android:onClick="clickingSpinner"
         android:layout_below="@+id/moldy"
@@ -50,5 +67,56 @@
         android:layout_alignStart="@+id/moldy"
         android:layout_marginLeft="48dp"
         android:layout_marginStart="48dp" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:text="Dum"
+        android:textSize="10sp"
+        android:id="@+id/spinner2"
+        android:onClick="clickingSpinner"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/harry"
+        android:layout_alignStart="@+id/harry" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:text="Har"
+        android:textSize="10sp"
+        android:id="@+id/spinner3"
+        android:onClick="clickingSpinner"
+        android:layout_below="@+id/ron"
+        android:layout_alignRight="@+id/backtomainbutton"
+        android:layout_alignEnd="@+id/backtomainbutton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WHOA"
+        android:id="@+id/magic"
+        android:layout_above="@+id/ron"
+        android:layout_toRightOf="@+id/sosund234"
+        android:layout_toEndOf="@+id/sosund234" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GRRRR"
+        android:id="@+id/grr"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/spinner"
+        android:layout_alignEnd="@+id/spinner"
+        android:textColor="#B8860B"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wise"
+        android:id="@+id/wise"
+        android:layout_alignBottom="@+id/spinner3"
+        android:layout_toRightOf="@+id/ron"
+        android:layout_toEndOf="@+id/ron" />
 
 </RelativeLayout>

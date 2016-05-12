@@ -3,6 +3,7 @@ package com.example.austin.harrypotterrev2;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 import java.io.InputStream;
@@ -51,11 +53,17 @@ public class easteregg extends AppCompatActivity {
 
     public void clickingSpinner(View view) {
         Animation animation = null;
+        Animation animationtext = null;
         final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.b);
-        ImageView imageView = (ImageView) findViewById(R.id.moldy);
+        ImageView vold = (ImageView) findViewById(R.id.moldy);
+        TextView grrr = (TextView) findViewById(R.id.grr);
         animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        animationtext = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+        grrr.setTypeface(font);
         mediaPlayer.start();
-        imageView.startAnimation(animation);
+        vold.startAnimation(animation);
+        grrr.startAnimation(animationtext);
 
     }
 }
