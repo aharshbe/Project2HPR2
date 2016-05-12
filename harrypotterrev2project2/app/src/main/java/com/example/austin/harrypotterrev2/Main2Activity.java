@@ -70,6 +70,8 @@ public class Main2Activity extends AppCompatActivity {
         gross.setText(mGross);
         gross.setTypeface(font);
 
+        //Makes text scrollable on the plot textview for more ease
+
         plot.setMovementMethod(new ScrollingMovementMethod());
 
 
