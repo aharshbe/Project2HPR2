@@ -93,9 +93,9 @@ public class NavBar extends AppCompatActivity
 
         } else if (id == R.id.nav_quotes) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+//        } else if (id == R.id.nav_share) {
+//
+//        } else if (id == R.id.nav_send) {
 
         }
 
