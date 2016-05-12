@@ -71,7 +71,7 @@ public class easteregg extends AppCompatActivity {
     public void clickingHarry(View view) {
         Animation animation = null;
         Animation animationtext = null;
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.b);
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.hp);
         ImageView vold = (ImageView) findViewById(R.id.ron);
         TextView grrr = (TextView) findViewById(R.id.magic);
         animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
@@ -87,7 +87,7 @@ public class easteregg extends AppCompatActivity {
     public void clickingDumbl(View view) {
         Animation animation = null;
         Animation animationtext = null;
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.b);
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.doomed);
         ImageView vold = (ImageView) findViewById(R.id.harry);
         TextView grrr = (TextView) findViewById(R.id.wise);
         animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
@@ -103,7 +103,8 @@ public class easteregg extends AppCompatActivity {
     public void clickingCrazzy(View view) {
         Animation animation = null;
         Animation animationtext = null;
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.b);
+        int textsize = 80;
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.whoa);
         ImageView vold = (ImageView) findViewById(R.id.harry);
         ImageView vold2 = (ImageView) findViewById(R.id.ron);
         ImageView vold3 = (ImageView) findViewById(R.id.moldy);
@@ -114,12 +115,17 @@ public class easteregg extends AppCompatActivity {
         animationtext = AnimationUtils.loadAnimation(this, R.anim.text);
         Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
         grrr.setTypeface(font);
+        grrr2.setTypeface(font);
+        grrr3.setTypeface(font);
+        grrr.setTextSize(textsize);
+        grrr2.setTextSize(textsize);
+        grrr3.setTextSize(textsize);
         mediaPlayer.start();
         vold.startAnimation(animationtext);
-        vold2.startAnimation(animation);
+        vold2.startAnimation(animationtext);
         vold3.startAnimation(animationtext);
         grrr.startAnimation(animationtext);
-        grrr2.startAnimation(animation);
+        grrr2.startAnimation(animationtext);
         grrr3.startAnimation(animationtext);
         grrr.setTextColor(Color.YELLOW);
         grrr2.setTextColor(Color.RED);
