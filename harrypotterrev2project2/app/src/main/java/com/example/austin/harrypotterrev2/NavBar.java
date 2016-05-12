@@ -1,6 +1,7 @@
 package com.example.austin.harrypotterrev2;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
@@ -12,9 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class NavBar extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+        TextView title, mvoies, books, quotes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +27,21 @@ public class NavBar extends AppCompatActivity
         setContentView(R.layout.activity_nav_bar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
 //        TextView tv1 = (TextView) findViewById(R.id.tv1);
 //        TextView tv2 = (TextView) findViewById(R.id.tv2);
 //        tv1.setTypeface(font);
 //        tv2.setTypeface(font);
+
+        title = (TextView) findViewById(R.id.title);
+        mvoies = (TextView) findViewById(R.id.mvoies);
+        books = (TextView) findViewById(R.id.books);
+        quotes = (TextView) findViewById(R.id.quotes);
+        title.setTypeface(font);
+        mvoies.setTypeface(font);
+        books.setTypeface(font);
+        quotes.setTypeface(font);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -124,5 +139,30 @@ public class NavBar extends AppCompatActivity
         //closes the drawer after the option is selected from the menu
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    public void whenHPClicked(View view) {
+        Toast.makeText(getApplicationContext(), "You found the easteregg!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(NavBar.this, easteregg.class);
+        startActivity(intent);
+
+    }
+    //Creates an OnClick event for intent on the movies textView
+
+
+    public void whenClickedMovies(View view) {
+        Intent intent = new Intent(NavBar.this, MainActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void whenClickedBooks(View view) {
+        Intent intent = new Intent(NavBar.this, BooksActivity.class);
+        startActivity(intent);
+    }
+
+    public void whenClickedQuotes(View view) {
+        Intent intent = new Intent(NavBar.this, QuotesActivity.class);
+        startActivity(intent);
     }
 }
