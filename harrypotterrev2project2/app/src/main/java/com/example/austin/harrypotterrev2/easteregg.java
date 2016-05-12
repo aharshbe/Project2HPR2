@@ -111,19 +111,19 @@ public class easteregg extends AppCompatActivity {
         TextView grrr2 = (TextView) findViewById(R.id.magic);
         TextView grrr3 = (TextView) findViewById(R.id.grr);
         animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
-        animationtext = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        animationtext = AnimationUtils.loadAnimation(this, R.anim.text);
         Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
         grrr.setTypeface(font);
         mediaPlayer.start();
-        vold.startAnimation(animation);
+        vold.startAnimation(animationtext);
         vold2.startAnimation(animation);
-        vold3.startAnimation(animation);
+        vold3.startAnimation(animationtext);
         grrr.startAnimation(animationtext);
-        grrr2.startAnimation(animationtext);
+        grrr2.startAnimation(animation);
         grrr3.startAnimation(animationtext);
         grrr.setTextColor(Color.YELLOW);
-        grrr2.setTextColor(Color.YELLOW);
-        grrr3.setTextColor(Color.YELLOW);
+        grrr2.setTextColor(Color.RED);
+        grrr3.setTextColor(Color.WHITE);
 
     }
 }
