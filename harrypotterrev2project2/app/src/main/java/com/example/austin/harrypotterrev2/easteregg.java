@@ -103,6 +103,7 @@ public class easteregg extends AppCompatActivity {
     public void clickingCrazzy(View view) {
         Animation animation = null;
         Animation animationtext = null;
+        Animation animationtext2 = null;
         int textsize = 80;
         final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.whoa);
         ImageView vold = (ImageView) findViewById(R.id.harry);
@@ -113,6 +114,7 @@ public class easteregg extends AppCompatActivity {
         TextView grrr3 = (TextView) findViewById(R.id.grr);
         animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
         animationtext = AnimationUtils.loadAnimation(this, R.anim.text);
+        animationtext2 = AnimationUtils.loadAnimation(this, R.anim.crazytext);
         Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
         grrr.setTypeface(font);
         grrr2.setTypeface(font);
@@ -124,9 +126,9 @@ public class easteregg extends AppCompatActivity {
         vold.startAnimation(animationtext);
         vold2.startAnimation(animationtext);
         vold3.startAnimation(animationtext);
-        grrr.startAnimation(animationtext);
-        grrr2.startAnimation(animationtext);
-        grrr3.startAnimation(animationtext);
+        grrr.startAnimation(animationtext2);
+        grrr2.startAnimation(animationtext2);
+        grrr3.startAnimation(animationtext2);
         grrr.setTextColor(Color.YELLOW);
         grrr2.setTextColor(Color.RED);
         grrr3.setTextColor(Color.WHITE);
