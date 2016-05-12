@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/wicked"
     tools:context="com.example.austin.harrypotterrev2.easteregg">
 
 
@@ -18,13 +18,13 @@
         android:contentDescription="@string/bb"/>
 
     <ImageView
-        android:id="@+id/easteregg"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:background="@drawable/wicked"
+        android:id="@+id/moldy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/f11"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -37,5 +37,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:contentDescription="@string/tryme"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:text="'?'"
+        android:id="@+id/spinner"
+        android:onClick="clickingSpinner"
+        android:layout_below="@+id/moldy"
+        android:layout_alignLeft="@+id/moldy"
+        android:layout_alignStart="@+id/moldy"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp" />
 
 </RelativeLayout>
