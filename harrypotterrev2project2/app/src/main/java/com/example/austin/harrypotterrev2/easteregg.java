@@ -3,6 +3,7 @@ package com.example.austin.harrypotterrev2;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -64,6 +65,65 @@ public class easteregg extends AppCompatActivity {
         mediaPlayer.start();
         vold.startAnimation(animation);
         grrr.startAnimation(animationtext);
+        grrr.setTextColor(Color.MAGENTA);
+    }
+
+    public void clickingHarry(View view) {
+        Animation animation = null;
+        Animation animationtext = null;
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.b);
+        ImageView vold = (ImageView) findViewById(R.id.ron);
+        TextView grrr = (TextView) findViewById(R.id.magic);
+        animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        animationtext = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+        grrr.setTypeface(font);
+        mediaPlayer.start();
+        vold.startAnimation(animation);
+        grrr.startAnimation(animationtext);
+        grrr.setTextColor(Color.RED);
+    }
+
+    public void clickingDumbl(View view) {
+        Animation animation = null;
+        Animation animationtext = null;
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.b);
+        ImageView vold = (ImageView) findViewById(R.id.harry);
+        TextView grrr = (TextView) findViewById(R.id.wise);
+        animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        animationtext = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+        grrr.setTypeface(font);
+        mediaPlayer.start();
+        vold.startAnimation(animation);
+        grrr.startAnimation(animationtext);
+        grrr.setTextColor(Color.BLUE);
+    }
+
+    public void clickingCrazzy(View view) {
+        Animation animation = null;
+        Animation animationtext = null;
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.b);
+        ImageView vold = (ImageView) findViewById(R.id.harry);
+        ImageView vold2 = (ImageView) findViewById(R.id.ron);
+        ImageView vold3 = (ImageView) findViewById(R.id.moldy);
+        TextView grrr = (TextView) findViewById(R.id.wise);
+        TextView grrr2 = (TextView) findViewById(R.id.magic);
+        TextView grrr3 = (TextView) findViewById(R.id.grr);
+        animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        animationtext = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        Typeface font = Typeface.createFromAsset(getAssets(), "hpfont.TTF");
+        grrr.setTypeface(font);
+        mediaPlayer.start();
+        vold.startAnimation(animation);
+        vold2.startAnimation(animation);
+        vold3.startAnimation(animation);
+        grrr.startAnimation(animationtext);
+        grrr2.startAnimation(animationtext);
+        grrr3.startAnimation(animationtext);
+        grrr.setTextColor(Color.YELLOW);
+        grrr2.setTextColor(Color.YELLOW);
+        grrr3.setTextColor(Color.YELLOW);
 
     }
 }
