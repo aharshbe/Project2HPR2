@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +69,8 @@ public class Main2Activity extends AppCompatActivity {
         topquote.setText(mTopQuote);
         gross.setText(mGross);
         gross.setTypeface(font);
+
+        plot.setMovementMethod(new ScrollingMovementMethod());
 
 
     }
