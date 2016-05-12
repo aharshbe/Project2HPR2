@@ -3,12 +3,14 @@ package com.example.austin.harrypotterrev2;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 
 
@@ -49,8 +51,10 @@ public class easteregg extends AppCompatActivity {
 
     public void clickingSpinner(View view) {
         Animation animation = null;
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.b);
         ImageView imageView = (ImageView) findViewById(R.id.moldy);
         animation = AnimationUtils.loadAnimation(this, R.anim.movingegg);
+        mediaPlayer.start();
         imageView.startAnimation(animation);
 
     }
