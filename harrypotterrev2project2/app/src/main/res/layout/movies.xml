@@ -8,6 +8,8 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+
+
     <TextView
         android:id="@+id/MovieName"
         android:layout_width="200dp"
