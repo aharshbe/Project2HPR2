@@ -20,7 +20,8 @@
         android:shadowRadius="1.5"
         android:text="New Text"
         android:textColor="#B8860B"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:transitionName="textviewanim"/>
 
     <ImageView
         android:id="@+id/movieCover"

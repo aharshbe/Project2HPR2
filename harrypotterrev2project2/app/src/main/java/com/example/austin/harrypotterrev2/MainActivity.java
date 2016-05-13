@@ -1,5 +1,6 @@
 package com.example.austin.harrypotterrev2;
 
+import android.app.ActivityOptions;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -9,11 +10,15 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.transition.ChangeImageTransform;
+import android.transition.ChangeTransform;
+import android.transition.TransitionSet;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
@@ -61,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             String query = intent.getStringExtra(SearchManager.QUERY);
             Cursor cursor = OpenHelper.getInstance(MainActivity.this).searchMovies(query);
             adapter.swapCursor(cursor);
-
         }
     }
 
@@ -70,7 +74,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //adding animation info
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         setContentView(R.layout.activity_main);
+
+        TransitionSet transitionSet = new TransitionSet();
+        transitionSet.addTransition(new ChangeTransform());
+
+        getWindow().setSharedElementEnterTransition(transitionSet);
+        getWindow().setSharedElementReturnTransition(transitionSet);
+
 
 
         listView = (ListView) findViewById(R.id.listView);
@@ -154,9 +167,20 @@ public class MainActivity extends AppCompatActivity {
 
                 //Using the cursor instead of my way using the array adapters
 
+                TextView textView = (TextView) findViewById(R.id.MovieName);
+
+
                 Cursor cursor = adapter.getCursor();
                 cursor.moveToPosition(position);
+
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                //for animation
+
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, textView, "textviewanim");
+
+
+
+
                 intent.putExtra("title", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_TITLE)));
                 intent.putExtra("cover", AddingImages.getDrawable(cursor.getString(cursor.getColumnIndex("cover"))));
                 intent.putExtra("plot", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_PLOT)));
@@ -168,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //Starts the intent
 
-                startActivity(intent);
+                startActivity(intent, options.toBundle());
             }
         });
 

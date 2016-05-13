@@ -42,6 +42,10 @@ public class Main2Activity extends AppCompatActivity {
         TextView gross = (TextView) findViewById(R.id.gross);
         ImageView cover = (ImageView) findViewById(R.id.movieCover);
 
+        //for animation
+
+        title.setTransitionName("textviewanim");
+
         //Creates the intent and the getter for the intent to pull out the information from the previous activity view the key/value pair
 
         Intent intent = getIntent();

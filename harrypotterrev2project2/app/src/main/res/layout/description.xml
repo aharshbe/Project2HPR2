@@ -16,7 +16,8 @@
         android:text="TITLE"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#B8860B"
-        android:textSize="43sp" />
+        android:textSize="43sp"
+        android:transitionName="textviewanim"/>
 
     <TextView
         android:id="@+id/date"
