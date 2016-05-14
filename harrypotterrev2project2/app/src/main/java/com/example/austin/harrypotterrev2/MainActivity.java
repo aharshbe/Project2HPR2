@@ -167,8 +167,8 @@ public class MainActivity extends AppCompatActivity {
 
                 //Using the cursor instead of my way using the array adapters
 
-                TextView textView = (TextView) findViewById(R.id.MovieName);
-                ImageView imageView = (ImageView)findViewById(R.id.movieCover);
+                View textView = view.findViewById(R.id.MovieName);
+                View imageView = view.findViewById(R.id.movieCover);
 
 
                 Cursor cursor = adapter.getCursor();
