@@ -168,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
                 //Using the cursor instead of my way using the array adapters
 
                 TextView textView = (TextView) findViewById(R.id.MovieName);
+                ImageView imageView = (ImageView)findViewById(R.id.movieCover);
 
 
                 Cursor cursor = adapter.getCursor();
@@ -176,9 +177,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 //for animation
 
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, textView, "textviewanim");
-
-
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, textView,"textviewanim");
+                ActivityOptions options2 = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, imageView, "movingimage");
 
 
                 intent.putExtra("title", cursor.getString(cursor.getColumnIndex(OpenHelper.COL_TITLE)));
@@ -191,8 +191,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 //Starts the intent
-
                 startActivity(intent, options.toBundle());
+
             }
         });
 

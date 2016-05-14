@@ -45,6 +45,7 @@ public class Main2Activity extends AppCompatActivity {
         //for animation
 
         title.setTransitionName("textviewanim");
+        cover.setTransitionName("movingimage");
 
         //Creates the intent and the getter for the intent to pull out the information from the previous activity view the key/value pair
 

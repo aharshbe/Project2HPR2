@@ -94,7 +94,8 @@
         android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:transitionName="movingimage"/>
 
     <TextView
         android:id="@+id/plot"
