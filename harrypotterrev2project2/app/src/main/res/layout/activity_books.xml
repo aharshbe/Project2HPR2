@@ -3,105 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/libraryhd"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.austin.harrypotterrev2.BooksActivity">
+    tools:context="com.example.austin.harrypotterrev2.Main2Activity">
 
-    <TextView
-        android:id="@+id/bookstitle"
+    <ListView
+        android:id="@+id/listView2"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:onClick="whenbooksclicked"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1.5"
-        android:text="Books"
-        android:textColor="#B8860B"
-        android:textSize="112sp" />
-
-    <TextView
-        android:id="@+id/book1"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/bookstitle"
-        android:onClick="opendescription1"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1.5"
-        android:text="Harry Potter and the Philosopher's Stone"
-        android:textColor="#B8860B"
-        android:textSize="35sp" />
-
-    <ImageView
-        android:id="@+id/book1cover"
-        android:layout_width="90dp"
-        android:layout_height="120dp"
-        android:layout_alignEnd="@+id/bookstitle"
-        android:layout_alignRight="@+id/bookstitle"
-        android:layout_below="@+id/bookstitle"
-        android:background="@drawable/bcoverhd"
-        android:onClick="opendescription1" />
-
-    <TextView
-        android:id="@+id/book2"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/book1cover"
-        android:onClick="opendescription2"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1.5"
-        android:text="Harry Poter and the Chamber of Secrets"
-        android:textColor="#B8860B"
-        android:textSize="35sp" />
-
-    <ImageView
-        android:id="@+id/book2cover"
-        android:layout_width="90dp"
-        android:layout_height="120dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/book1cover"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/book2cover"
-        android:onClick="opendescription2" />
-
-    <TextView
-        android:id="@+id/book3"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="34dp"
-        android:onClick="opendescription3"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1.5"
-        android:text="Harry Potter and the Prisoner of Azkaban"
-        android:textColor="#B8860B"
-        android:textSize="35sp" />
-
-    <ImageView
-        android:id="@+id/book3cover"
-        android:layout_width="90dp"
-        android:layout_height="120dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/book3"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/book3cover"
-        android:onClick="opendescription3" />
+        android:layout_height="match_parent"
+        android:contentDescription="@string/listview"/>
 
 </RelativeLayout>

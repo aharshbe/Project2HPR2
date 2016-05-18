@@ -1,68 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background3"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.austin.harrypotterrev2.bookDescription">
-
-    <Button
-        android:id="@+id/backbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:onClick="booksback"
-        android:text="Back to books"
-        android:contentDescription="@string/bb"/>
+    android:background="@drawable/background2"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/description1"
+        android:id="@+id/title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="6"
+        android:text="TITLE"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
+        android:textSize="43sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="184dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="DATE"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/favchar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/backbutton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:text="Eleven years ago, wizards rejoiced all over the world, and Muggles (non-magic folk) were confused. They celebrated because He-Who-Must-Not-Be-Named was defeated. In other words, Voldemort (the evilest wizard around) killed Harry Potter's parents, but for some strange reason, he couldn't kill little baby Harry. Now Voldemort seems to have disappeared. Overnight, baby Harry has become a hero – 'The Boy Who Lived.' Having lost his family and home, Harry also has become an orphan. Dumbledore (the principle of Hogwarts School of Wizardry and Witchcraft), Professor McGonagall (a teacher at Hogwarts), and Hagrid (a groundskeeper at Hogwarts) find a home for baby Harry with his Muggle extended family, the Dursleys.
-"
-        android:textColor="#F0FFFF"
-        android:textSize="10dp" />
+        android:layout_alignTop="@+id/date"
+        android:layout_marginTop="30dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="FAVCHAR"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
+        android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/description2"
+        android:id="@+id/quote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/description1"
-        android:text="Cut to present day, when ten-year-old Harry lives with his super-mean aunt and uncle and their son Dudley. When they go to the zoo for Dudley's birthday, Harry encounters a sympathetic snake. He's able to speak to the friendly reptile and somehow seems to have removed the glass from its cage, so it can go back to Brazil. After the trip to the zoo, mysterious letters start arriving for Harry. His uncle, Mr. Dursley, is furious and tries to keep them from Harry. But the letters keep arriving at such a rapid rate that, the evening before Harry's eleventh birthday, his uncle takes the whole family to a deserted island to escape all of the mail."
-        android:textColor="#F0FFFF"
-        android:textSize="10dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/favchar"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="6"
+        android:text="QUOTE"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FF4500"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/book1cover"
-        android:layout_width="70dp"
-        android:layout_height="80dp"
-        android:layout_alignEnd="@+id/bookstitle"
-        android:layout_alignRight="@+id/bookstitle"
-        android:layout_below="@+id/bookstitle"
-        android:background="@drawable/bcoverhd"
-        android:onClick="booksback" />
-
-    <ImageView
-        android:id="@+id/coolimage"
-        android:layout_width="400dp"
-        android:layout_height="130dp"
+    <TextView
+        android:id="@+id/pages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="PAGES"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B8860B"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/movieCover"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:background="@drawable/diagon_alley" />
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/plot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="6"
+        android:text="PLOT"
+        android:maxLines="6"
+        android:scrollbars="vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#228B22"
+        android:textSize="30sp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"/>
 
 </RelativeLayout>
