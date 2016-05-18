@@ -86,7 +86,7 @@ public class OpenHelper2 extends SQLiteOpenHelper {
         values.put(COL_DATE, "Harry Potter and the Sorcerer’s Stone");
         values.put(COL_FAV_CHAR, "Hagrid");
         values.put(COL_TOPQUOTE, "It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends." + "\n" + "- Professor Dumbledore");
-        values.put(COL_PAGES, "223");
+        values.put(COL_PAGES, "223 pages");
         db.insert(BOOKS_TABLE_NAME, null, values);
         //Book 2
         values = new ContentValues();
@@ -160,67 +160,112 @@ public class OpenHelper2 extends SQLiteOpenHelper {
         values.put(COL_TITLE, "Harry Potter and the Chamber of Secrets");
         values.put(COL_COVER, "book2");
         values.put(COL_DATE, "Jul 02, 1998");
-        values.put(COL_FAV_CHAR, "");
-        values.put(COL_TOPQUOTE, "");
-        values.put(COL_PAGES, "");
+        values.put(COL_FAV_CHAR, "Dobby");
+        values.put(COL_TOPQUOTE, "It is our choices, Harry, that show what we truly are, far more than our abilities.");
+        values.put(COL_PAGES, "251 pages");
         db.insert(BOOKS_TABLE_NAME, null, values);
         //Book 3
         values = new ContentValues();
-        values.put(COL_PLOT, "");
-        values.put(COL_COVER, "");
-        values.put(COL_DATE, "");
-        values.put(COL_FAV_CHAR, "");
-        values.put(COL_TOPQUOTE, "");
-        values.put(COL_PAGES, "");
+        values.put(COL_PLOT, "Forced to spend the summer of his thirteenth birthday stuck with the Dursleys on Privet Drive, Harry Potter is counting down the days until he can return to Hogwarts. After accidentally causing his horrible Aunt Marge to inflate like a balloon one evening near the end of term, Harry flees Privet Drive and rents a room at The Leaky Cauldron for the remainder of the holiday. The night before boarding the Hogwarts Express with friends Ron and Hermione, Harry learns that an infamous dark wizard, Sirius Black, has escaped from Azkaban (a wizard’s prison) in order to find and murder Harry.\n" +
+                "\n" +
+                "Harry’s third year gets off to a rough start. Professor Trelawney, the divination teacher, routinely predicts Harry’s early death to the class. Hagrid, recently appointed to teach Care of Magical Creatures, runs into trouble with the ministry after Draco Malfoy reports that Hagrid’s hippogriff, Buckbeak, is rogue and dangerous. The presence of dementors–Azkaban guards who feed on human emotion–surrounding the school for security only make Harry feel worse. Dementors have an unusual effect on Harry, triggering vivid recollections of his parents’ deaths. When the dementors storm the Quidditch Pitch and cause Harry to lose a match for Gryffindor, he persuades new Defense Against the Dark Arts teacher, Remus Lupin, to give him “anti-dementor lessons.” Lupin begins to teach Harry a patronus charm which chases off dementors with happiness. Harry finds it difficult to cast the Patronus charm and continues to hear his mother’s voice whenever a dementor approaches.\n" +
+                "\n" +
+                "Sirius Black is spotted at Hogwarts twice over the course of the school year, but is never caught. Harry also begins to spot a large black dog periodically, which Trelawney believes is sign of Harry’s impending death. Midway through the term, Harry discovers that Sirius Black was James Potter’s best friend, Harry’s godfather, and the wizard responsible for betraying the Potters to to Lord Voldemort. Professor Lupin confirms this disturbing detail and admits to knowing both James Potter and Sirius Black during his youth.\n" +
+                "\n" +
+                "As the end of term approaches, Harry learns that Hagrid’s hippogriff, Buckbeak, has been sentenced to death. Harry, Ron and Hermione decide to go to Hagrid’s hut to be with him during Buckbeak’s execution, even though it’s against the rules to venture off into the school grounds at night. Hagrid tries to save the trio from getting into trouble by pushing them out his back door as the executioner arrives. The large black dog appears and drags Ron into a secret tunnel beneath the Whomping Willow tree, which leads to an abandoned house called The Shrieking Shack in Hogsmeade. Harry and Hermione follow and discover a murderous Sirius Black waiting for them.\n" +
+                "\n" +
+                "Black explains that he is an animagus with the ability to transform into a dog. He also reveals that he is not after Harry, but Ron’s rat scabbers who is also an animagus named Peter Pettigrew. The trio don’t believe him at first, but Lupin turns up in the Shrieking Shack and the two force Pettigrew to transform out of his rat shape. Lupin and Black tell Harry that it was Pettigrew, not Black, who betrayed Harry’s parents to Lord Voldemort. Lupin also confirms Hermione’s suspicion that he is a werewolf and that Harry’s father, Sirius Black, and Pettigrew learned to become animaguses to accompany Lupin during his monthly transformations. Although Lupin and Black want to kill Pettigrew to avenge James and Lily, Harry intervenes. They decide to take Pettigrew up to the school to clear Black’s name, but Pettigrew escapes when Lupin transforms into his wolf shape after exposure to the full moon. Dementors swarm Harry and Sirius and, as Harry faints, he sees someone who looks like his father cast a Patronus charm that drives the dementors away.\n" +
+                "\n" +
+                "Harry awakens in the hospital wing with Hermione and an unconscious Ron. He learns that Black is being imprisoned in the school and about to be administered a “dementor’s kiss” which will remove his soul from his body. Dumbledore, who believes that Black is innocent, suggests that Harry and Hermione use Hermione’s time turner, which she secretly used to take an overloaded course schedule all year, to go back in time and save Sirius. Harry and Hermione turn the time turner and manage to save Buckbeak from execution without being seen. While waiting to save Sirius, Harry realizes that it was his patronus that saved his past self. He casts the charm which drives away the dementors and flies Buckbeak up to the tower where Black is being held prisoner. Black escapes with Buckbeak and goes into hiding. Harry returns to Privet Drive for the summer, but remains in correspondence with Sirius.");
+        values.put(COL_TITLE, "Harry Potter and the Prisoner of Azkaban");
+        values.put(COL_COVER, "book3");
+        values.put(COL_DATE, "July 8, 1999");
+        values.put(COL_FAV_CHAR, "Serius Black");
+        values.put(COL_TOPQUOTE, "Mr. Moony presents his compliments to Professor Snape, and begs him to keep his abnormally large nose out of other people's business.\n" +
+                "Mr. Prongs agrees with Mr. Moony, and would like to add that Professor Snape is an ugly git.\n" +
+                "Mr. Padfoot would like to register his astonishment that an idiot like that ever became a professor.\n" +
+                "Mr. Wormtail bids Professor Snape good day, and advises him to wash his hair, the slimeball.");
+        values.put(COL_PAGES, "317 pages");
         db.insert(BOOKS_TABLE_NAME, null, values);
         //Book 4
         values = new ContentValues();
-        values.put(COL_PLOT, "");
-        values.put(COL_COVER, "");
-        values.put(COL_DATE, "");
-        values.put(COL_FAV_CHAR, "");
-        values.put(COL_TOPQUOTE, "");
-        values.put(COL_PAGES, "");
+        values.put(COL_PLOT, "The book that could legitimately be called the turning point of the series is packed with action, backstory and significant darkness. It begins in the village of Little Hangleton, where Lord Voldemort and his servant Peter Pettigrew are in hiding. We hear that Voldemort is planning to return to power, and that he wants to kill Harry Potter. Harry sees this scene through a dream, and on his awakening, we find him having another miserable summer with the Dursleys in Privet Drive. However, he is saved by the Weasleys, who come to take Harry back to The Burrow so that he can attend the Quidditch World Cup with them. Their visit causes mayhem in the Dursley household, leaving Dudley even more terrified of wizards.\n" +
+                "\n" +
+                "The Weasleys, Harry and Hermione take a Portkey to the World Cup, but on the night after the game a group of Death Eaters reunite and start to terrorize Muggles. Death Eaters were Voldemort’s followers, but unbeknownst to them, a truly loyal Death Eater is among them: one who went to Azkaban rather than renounce his allegiance, and who shoots the Dark Mark (a sign used to signal death) into the sky to scare them. Harry, Hermione and the Weasleys all return to Hogwarts, and it is announced that a Triwizard Tournament will be held at Hogwarts this year. This is a centuries-old tournament in which three seventeen-year-old witches or wizards battle through various obstacles to win eternal glory. Students from two other wizarding schools, Beauxbatons and Durmstrang, arrive and the competing Champions are chosen from the Goblet of Fire. However, along with the Hogwarts Champion Cedric Diggory, Harry’s name inexplicably comes out too. He has no choice but to compete.\n" +
+                "\n" +
+                "Ron believes Harry entered his name on purpose, and succumbs to jealousy, feeling that he is overshadowed by both his friends and his family. Meanwhile, the conniving journalist Rita Skeeter has taken an interest in Harry, and writes many articles that tarnish his reputation. Hagrid shows Harry that he will have to face dragons in the first task. The new Defence Against the Dark Arts teacher, Mad-Eye Moody, advises Harry to play to his strengths, suggesting that he should fly on a broomstick to get past the dragon. Harry does so, and manages to complete the first task. After it, he and Ron reconcile. It is then announced that on Christmas day a Yule Ball will be held in honour of the Triwizard Tournament, and Harry asks Cho Chang to accompany him. She must refuse him as she is already going with Cedric, and although Harry is upset, he does manage to get Parvati Patil to go with him instead. It is revealed at the ball that Hermione is going with Viktor Krum, the Durmstrang Champion and internationally-famous Quidditch player. Ron is exceedingly jealous. The second task is set in the lake in the grounds of Hogwarts, and Harry must dive into its depths to save Ron. He successfully completes the task with a little help from Dobby the house-elf.\n" +
+                "\n" +
+                "In the summer, Harry competes in the third and final task. It is a maze filled with beasts and charms that the Champions have to battle through, but in the end he and Cedric get to the Triwizard Cup at the same time. They take it together, but it turns out that the Cup is a Portkey, and the two are transported to a graveyard. Cedric gets killed by Peter Pettigrew, who is lying in wait for them along with Lord Voldemort. Using some of Harry’s blood, Pettigrew brings Voldemort back to life, and Voldemort and Harry battle each other in a deadly duel. Harry manages to escape with Cedric’s body and returns to Hogwarts injured and devastated. He is taken by Mad-Eye Moody, who reveals that he is in fact the faithful Death Eater from the Quidditch World Cup, Barty Crouch Junior. He put Harry’s name into the Goblet of Fire, and has been making sure Harry got through the tasks and got to the Cup first so that he would be taken to Voldemort. Dumbledore arrives and takes Harry away, leaving Crouch to the care of some Dementors. Harry is broken after the death of Cedric and the knowledge that Voldemort is back. He leaves Hogwarts worried about the future, scared about what might happen, and frustrated that so few people actually believe his story.");
+        values.put(COL_TITLE, "Harry Potter and the Goblet of Fire");
+        values.put(COL_COVER, "book4");
+        values.put(COL_DATE, "July 8, 2000");
+        values.put(COL_FAV_CHAR, "Cedric Diggory");
+        values.put(COL_TOPQUOTE, "Remember, if the time should come when you have to make a choice between what is right and what is easy, remember what happened to a boy who was good, and kind, and brave, because he strayed across the path of Lord Voldemort. Remember Cedric Diggory.");
+        values.put(COL_PAGES, "636 pages");
         db.insert(BOOKS_TABLE_NAME, null, values);
         //Book 5
         values = new ContentValues();
-        values.put(COL_PLOT, "");
-        values.put(COL_TITLE, "");
-        values.put(COL_COVER, "");
-        values.put(COL_DATE, "");
-        values.put(COL_FAV_CHAR, "");
-        values.put(COL_TOPQUOTE, "");
-        values.put(COL_PAGES, "");
+        values.put(COL_PLOT, "Harry is stuck at Privet Drive with the Dursleys’ for his summer break with no contact from the wizarding world. He has resorted to stealing newspapers out of trashcans and sneaking around listening to the news to find out Voldemort’s plans. After getting into an argument with his uncle, he goes for a walk to a nearby park and sees Dudley. The two are then attacked by dementors, but Harry is able to rescue them both by using the Patronus Charm. Mrs. Figg, the Dursley’s neighbor, reveals that she is a Squib and has been tasked with looking after Harry on Dumbledore’s orders.\n" +
+                "\n" +
+                "After returning to Privet Drive, Harry receives a letter from the Ministry of Magic stating that he has been expelled from Hogwarts for performing magic in the presence of a Muggle. Dumbledore contacts the Ministry telling them they don’t have the authority to expel students. The Ministry then sends Harry a revised letter telling him that he’s suspended from school and must attend a disciplinary hearing. Harry then explains to the Dursleys what happened that night and that Voldemort has returned. This sends Uncle Vernon into a rage and he tells Harry that he has to leave the house. Petunia receives an anonymous Howler that says, “Remember my last, Petunia.” She tells the family that Harry had to stay.\n" +
+                "\n" +
+                "Nearly a week later, the Dursleys leave Harry at home to attend a (staged) awards ceremony for London’s best kept suburban lawns. While they are away, Mad Eye Moody and other members of the “Advance Guard” come to take Harry from Privet Drive. They arrive at 12 Grimmauld Plave, which is the headquarters of the Order of the Phoenix.");
+        values.put(COL_TITLE, "Harry Potter and the Order of the Phoenix");
+        values.put(COL_COVER, "book5");
+        values.put(COL_DATE, "June 21, 2003");
+        values.put(COL_FAV_CHAR, "Dolores Umbridge");
+        values.put(COL_TOPQUOTE, "We won't be seeing you,' Fred told Professor Umbridge, swinging his leg over his broomstick.\n" +
+                "\n" +
+                "'Yeah, don't bother to keep in touch,' said George, mounting his own. \n" +
+                "\n" +
+                "Fred looked around at the assembled students, and at the silent, watchful crowd. 'If anyone fancies buying a Portable Swamp, as demonstrated upstairs, come to number ninety-three, Diagon Alley — Weasleys' Wizard Wheezes,' he said in a loud voice, 'Our new premises!'\n" +
+                "\n" +
+                "'Special discounts to Hogwarts students who swear they're going to use our products to get rid of this old bat,' added George, pointing at Professor Umbridge.\n" +
+                "\n" +
+                "'STOP THEM!' shrieked Umbridge, but it was too late. As the Inquisitorial Squad closed in, Fred and George kicked off from the floor, shooting fifteen feet into the air, the iron peg swinging dangerously below. Fred looked across the hall at the poltergeist bobbing on his level above the crowd.\n" +
+                "\n" +
+                "'Give her hell from us, Peeves.'\n" +
+                "\n" +
+                "And Peeves, who Harry had never seen take an order from a student before, swept his belled hat from his head and sprang to a salute as Fred and George wheeled about to tumultuous applause from the students below and sped out of the open front doors into the glorious sunset.");
+        values.put(COL_PAGES, "766 pages");
         db.insert(BOOKS_TABLE_NAME, null, values);
         //Book 6
         values = new ContentValues();
-        values.put(COL_PLOT, "");
-        values.put(COL_TITLE, "");
-        values.put(COL_COVER, "");
-        values.put(COL_DATE, "");
-        values.put(COL_FAV_CHAR, "");
-        values.put(COL_TOPQUOTE, "");
-        values.put(COL_PAGES, "");
+        values.put(COL_PLOT, "Harry Potter and the Half-Blood Prince immediately highlights how dark and dangerous the times are. A visit to the Muggle Prime Minister’s office, where the newly-sacked Cornelius Fudge informs him of the rise of Lord Voldemort shows how the effects of his return are spreading. Narcissa Malfoy visits Severus Snape, begging him to protect her son Draco from the wrath of Voldemort: Draco has been given a task, and she knows that for him to fail would mean certain death. Snape makes an Unbreakable Vow agreeing to help Draco. Meanwhile, Dumbledore comes to Privet Drive, announcing that Sirius left Grimmauld Place to Harry in his will, then taking him to meet Horace Slughorn, a former Hogwarts Potions Master. Together, they convince Slughorn to return to Hogwarts, no doubt lured by Harry’s fame.\n" +
+                "\n" +
+                "As classes start, Harry finds he excels in Potions because of a book which has another student’s instructions scribbled in it. It is said to be the property of the Half-Blood Prince. Dumbledore gives Harry some private lessons, in which the two delve into memories pertaining to the younger Lord Voldemort. They see his family on his mother’s side, and him as an eleven-year-old at a Muggle Orphanage. Viewing the memories is an attempt to find his weakness. On a trip to Hogsmeade, Quidditch player Katie Bell is accidentally cursed by a necklace. Harry thinks Malfoy is behind it. Meanwhile, he is gradually realising feelings for Ginny, and Ron starts going out with Lavender Brown – much to Hermione’s devastation.\n" +
+                "\n" +
+                "Dumbledore shows Harry another memory: a memory from Slughorn which has been tampered with. It shows a sixteen-year-old Tom Riddle asking about Horcruxes, but gives no further information. Dumbledore asks Harry to try and obtain the real memory, which he eventually gets from Slughorn by using a potion that gives the drinker good luck. After watching this memory, Dumbledore guesses that Voldemort made seven Horcruxes: objects that contain pieces of someone’s soul. Meanwhile, on Ron’s birthday, he is given a drink which is laced with poison and nearly dies. Harry again suspects Malfoy.\n" +
+                "\n" +
+                "Dumbledore takes Harry to a cave which he suspects contains one of Voldemort’s Horcruxes. They work through the dark magic that guards the place and obtain it, seriously weakening Dumbledore in the process. On their return to Hogwarts they see a Dark Mark hovering above the castle, and race back to find the school awash with Death Eaters, and Draco Malfoy waiting for them. Harry is hidden under his Invisibility Cloak, and watches in horror as Snape comes out onto the Astronomy Tower and does what Draco could not: he kills Dumbledore. Snape then reveals that he is the Half-Blood Prince. At the funeral, Harry tells Ron, Hermione and Ginny, now his girlfriend, that he won’t return to Hogwarts next year, that he has to find and destroy the final Horcruxes. Ron and Hermione insist that they will accompany him wherever he goes.");
+        values.put(COL_TITLE, "Harry Potter and the Half-Blood Prince");
+        values.put(COL_COVER, "book6");
+        values.put(COL_DATE, "July 16, 2005");
+        values.put(COL_FAV_CHAR, "Horace Slughorn");
+        values.put(COL_TOPQUOTE, "And Harry saw very clearly as he sat there under the hot sun how people who cared about him had stood in front of him one by one, his mother, his father, his godfather, and finally Dumbledore, all determined to protect him; but now that was over. He could not let anybody else stand between him and Voldemort; he must abandon forever the illusion he ought to have lost at the age of one, that the shelter of a parent’s arms meant that nothing could hurt him. There was no waking from this nightmare, no comforting whisper in the dark that he was safe really, that it was all in his imagination; the last and greatest of his protectors had died, and he was more alone than he had ever been.");
+        values.put(COL_PAGES, "607 pages");
         db.insert(BOOKS_TABLE_NAME, null, values);
         //Book 7
         values = new ContentValues();
-        values.put(COL_PLOT, "");
-        values.put(COL_TITLE, "");
-        values.put(COL_COVER, "");
-        values.put(COL_DATE, "");
-        values.put(COL_FAV_CHAR, "");
-        values.put(COL_TOPQUOTE, "");
-        values.put(COL_PAGES, "");
-        db.insert(BOOKS_TABLE_NAME, null, values);
-        //Book 8
-        values = new ContentValues();
-        values.put(COL_PLOT, "");
-        values.put(COL_TITLE, "");
-        values.put(COL_COVER, "");
-        values.put(COL_DATE, "");
-        values.put(COL_FAV_CHAR, "");
-        values.put(COL_TOPQUOTE, "");
-        values.put(COL_PAGES, "");
+        values.put(COL_PLOT, "With Albus Dumbledore dead and the ministry weakened, Lord Voldemort’s power continues to grow over both the muggle and wizarding world. Harry leaves Privet Drive for the final time as the charm that offers Harry protection in the Dursleys’ home breaks. He escapes to The Burrow, which has become the temporary headquarters of the Order of the Phoenix. While Harry and the Weasley family are busy preparing for Bill and Fleur’s upcoming wedding, they receive a visit from the Minister for Magic, Rufus Scrimgeour. The minister reads portions of Albus Dumbledore’s will to Harry, Ron and Hermione, which reveals the unusual items left for each of them. Ron receives a deluminator (a device for capturing and releasing light) and Hermione receives a children’s book called The Tales of Beedle the Bard. Dumbledore leaves Harry the golden snitch Harry caught at his first quidditch match, as well as the sword of Godric Gryffindor. Scrimgeour reluctantly gives Harry the snitch, but claims that the sword belongs to Hogwarts and was not Dumbledore’s to give away.\n" +
+                "\n" +
+                "Bill and Fleur’s wedding reception is interrupted by news that the ministry has fallen into Voldemort’s hands. Harry, Ron and Hermione barely manage to disapparate as Death Eaters storm the wedding tent. After narrowly escaping two Death Eaters who manage to track them down on a muggle street, the trio take refuge at 12 Grimmauld Place. There, they learn that Sirius’ brother, Regulus Black, stole the real locket Horcrux and that it is now in the hands of Dolores Umbridge. The trio manages to sneak into the Ministry and steal the locket before retreating into the woods. Unable to destroy the Horcrux without the sword of Gryffindor, its presence brings out a dark side in Ron who leaves his friends in frustration. On Christmas Eve, Harry and Hermione visit Godric’s Hollow, the village where Voldemort murdered Harry’s parents, in the hopes of discovering another Horcrux. There, they are attacked by Voldemort’s snake, Nagini. Harry and Hermione narrowly escape before Voldemort arrives.\n" +
+                "\n" +
+                "Dismayed at the fruitlessness of their attempts to uncover and destroy more Horcruxes, Harry and Hermione make camp in the Forest of Dean. In the middle of the night, a ghostly silver doe leads Harry to the sword of Gryffindor, which is hidden beneath the surface of a frozen pond. Harry jumps into the pond to retrieve the sword, but is nearly suffocated by the locket Horcrux. Ron saves Harry and destroys the Horcrux using the sword. Back in their tent, Ron apologizes to Harry and Hermione for leaving and explains how his deluminator helped him find his way back.\n" +
+                "\n" +
+                "Curious about a mysterious symbol that keeps appearing in their horcrux search, the Trio visit Xenophilius Lovegood who explains that the symbol represents the legend of the Deathly Hallows: the Elder Wand, the Ressurection Stone, and a special invisibility cloak. When united, the objects are rumored to make one the master of death. Through his visions, Harry sees that Voldemort is hunting (and eventually uncovers), the Elder Wand, which previously belonged to Albus Dumbledore. After their visit to the Lovegoods’, Harry, Ron and Hermione are captured and taken to Malfoy manor. There, they are imprisoned with several others, including the wandmaker Ollivander and a goblin, Griphook. Dobby the house elf manages to help them escape to Bill and Fleur’s home, Shell Cottage, but is killed in the process. With Griphook’s help, the Trio breaks into Gringotts and retrieves another Horcrux, a cup once owned by Helga Hufflepuff. They are discovered, but escape on the back of a dragon.\n" +
+                "\n" +
+                "Harry sees a vision and knows that another Horcrux is at Hogwarts -a diadem made by Rowena Ravenclaw. Dumbledore’s brother, Aberforth, helps the trio sneak into the school and Ron and Hermione venture to the Chamber of Secrets to destroy Hufflepuff’s cup with basilisk fangs while Harry searches for Ravenclaw’s diadem. The trio find the diadem in the Room of Requirement, but are cornered by Malfoy, Crabbe and Goyle. Crabbe tries to kill the trio with Fiendfyre, but ends up destroying the Horcrux–and himself–in the blaze while the others escape. Students, teachers and even house elves defend Hogwarts as it is attacked by Death Eaters. Voldemort believes that Snape is preventing him from becoming master of the Elder Wand and kills the professor in the Shrieking Shack. In Snape’s last moments, he gives Harry a memory which Harry takes to the pensieve in the headmaster’s office. The memory reveals that Snape was in love with Lily Potter and had been secretly protecting Harry ever since Lily’s death. Harry also discovers that he became one of Voldemort’s horcruxes when the Dark Lord tried to kill him as a baby, and that he must sacrifice himself for Voldemort to be destroyed for good.\n" +
+                "\n" +
+                "Harry walks through the Forbidden Forest to Voldemort’s encampment, prepared to die. Voldemort casts the killing curse and Harry falls to the ground. He wakes up in a place that resembles a clean, empty King’s Cross station. There, Albus Dumbledore greets him and explains that Harry is not yet entirely dead because he is linked to the living Voldemort through his blood. Instead, Voldemort has only destroyed the piece of his own soul that lived in Harry. Harry finds himself back in the Forbidden Forest and pretends to be dead while Voldemort brings his body back to Hogwarts to announce victory. Neville refuses to accept Voldemort’s triumph and kills Nagini, the last remaining Horcrux, with the sword of Gryffindor. Harry springs from the ground and tells Voldemort that it is he who is the master of the Elder Wand, because he disarmed Draco (who had previously disarmed Dumbledore, at Malfoy Manor). Voldemort casts a killing curse as Harry disarms him. Since Harry is the true master of the wand, the killing curse backfires leaving Voldemort dead once and for all.\n" +
+                "\n" +
+                "Seventeen years later, Harry and his wife Ginny bring their children to King’s Cross Station to board the Hogwarts Express. Their younger son, Albus Severus, expresses concern that he might be sorted into Slytherin. Harry assures him that there is no shame to being in Slytherin. Hermione and Ron’s two children, Rose and Hugo, also board the train with their cousins. The epilogue closes with the assurance that, for Harry, “all was well.”");
+        values.put(COL_TITLE, "Harry Potter and the Deathly Hallows");
+        values.put(COL_COVER, "book7");
+        values.put(COL_DATE, "July 21, 2007");
+        values.put(COL_FAV_CHAR, "Severus Snape");
+        values.put(COL_TOPQUOTE, "“Albus Severus,\" Harry said quietly, so that nobody but Ginny could hear, and she was tactful enough to pretend to be waving to Rose, who was now on the train, \"you were named for two headmasters of Hogwarts. One of them was a Slytherin and he was probably the bravest man I ever knew.” ");
+        values.put(COL_PAGES, "607 pages");
         db.insert(BOOKS_TABLE_NAME, null, values);
 
     }
