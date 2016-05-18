@@ -69,7 +69,7 @@ public class BooksActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_books);
 
 
         listView = (ListView) findViewById(R.id.listView);
@@ -77,24 +77,25 @@ public class BooksActivity extends AppCompatActivity {
 
         //Creates a new cursor for the listMovies query from the database which grabs the select statement
 
-        Cursor cursor = OpenHelper.getInstance(this).listMovies();
+        Cursor cursor = OpenHelper2.getInstance(this).listBooks();
 
-        bookDescirption = new ArrayList<Movie>();
+
+        bookDescirption = new ArrayList<Book>();
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            Movie movieToAdd = new Movie();
+            Book bookToAdd = new Book();
 
             // movieToAdd.setmId(cursor.getString(cursor.getColumnIndex("id")));
-            movieToAdd.setmTitle(cursor.getString(cursor.getColumnIndex("title")));
-            movieToAdd.setmPlot(cursor.getString(cursor.getColumnIndex("plot")));
-            movieToAdd.setmDate(cursor.getString(cursor.getColumnIndex("date")));
-            movieToAdd.setmRuntime(cursor.getString(cursor.getColumnIndex("runtime")));
-            movieToAdd.setmQuote(cursor.getString(cursor.getColumnIndex("topquote")));
-            movieToAdd.setmGross(cursor.getString(cursor.getColumnIndex("gross")));
+            bookToAdd.setmTitle(cursor.getString(cursor.getColumnIndex("title")));
+            bookToAdd.setmPlot(cursor.getString(cursor.getColumnIndex("plot")));
+            bookToAdd.setmDate(cursor.getString(cursor.getColumnIndex("date")));
+            bookToAdd.setmFavChar(cursor.getString(cursor.getColumnIndex("favchar")));
+            bookToAdd.setmQuote(cursor.getString(cursor.getColumnIndex("topquote")));
+            bookToAdd.setmPages(cursor.getString(cursor.getColumnIndex("pages")));
 
             //Adds the columns
 
-            bookDescirption.add(movieToAdd);
+            bookDescirption.add(bookToAdd);
 
         }
 
